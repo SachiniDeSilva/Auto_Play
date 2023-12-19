@@ -1,4 +1,4 @@
-# auto_play
+# auto_play_project
 
 A new Flutter project.
 
