@@ -1,4 +1,5 @@
 import 'package:auto_play_project/Pages/home.dart';
+import 'package:auto_play_project/Pages/view_profile.dart';
 import 'package:flutter/material.dart';
 
 class mydrawer extends StatefulWidget {
@@ -50,7 +51,12 @@ class _mydrawerState extends State<mydrawer> {
                 padding: const EdgeInsets.only(top: 15.0),
                 child: Container(
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context)
+                          .push(MaterialPageRoute(builder: (_) {
+                        return ViewProfile();
+                      }));
+                    },
                     child: Text('View Profile'),
                     style: ElevatedButton.styleFrom(
                         fixedSize: Size.fromWidth(160),
