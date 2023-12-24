@@ -13,7 +13,7 @@ class Home extends StatelessWidget {
         backgroundColor: Color.fromARGB(255, 2, 27, 48),
         child: IconButton(
           color: Colors.white,
-          iconSize: 30.0,
+          iconSize: 40.0,
           onPressed: () {},
           icon: Icon(Icons.home),
         ),
@@ -30,14 +30,14 @@ class Home extends StatelessWidget {
               padding: const EdgeInsets.only(left: 130),
               child: IconButton(
                 color: Colors.black,
-                iconSize: 30.0,
+                iconSize: 40.0,
                 onPressed: () {},
                 icon: Icon(Icons.favorite),
               ),
             ),
             IconButton(
               color: Colors.black,
-              iconSize: 30.0,
+              iconSize: 40.0,
               onPressed: () {},
               icon: Icon(Icons.restart_alt),
             ),
