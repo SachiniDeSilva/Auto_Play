@@ -1,4 +1,5 @@
 // ignore: depend_on_referenced_packages
+import 'package:auto_play/Pages/edit_profile.dart';
 import 'package:auto_play/Pages/mydrawer.dart';
 import 'package:flutter/material.dart';
 
@@ -57,7 +58,13 @@ class _ViewProfileState extends State<ViewProfile> {
                           ListTile(
                             leading: Image.asset('assets/􀉩.png'),
                             title: TextButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (_) {
+                                    return EditProfile();
+                                  },
+                                ));
+                              },
                               child: const Padding(
                                 padding: EdgeInsets.only(right: 160),
                                 child: Text(
@@ -161,7 +168,7 @@ class _ViewProfileState extends State<ViewProfile> {
         );
       }),
       bottomNavigationBar: BottomAppBar(
-        color: Color.fromARGB(255, 119, 171, 214),
+        color: Color.fromARGB(255, 92, 174, 240),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
