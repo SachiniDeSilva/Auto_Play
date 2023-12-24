@@ -160,6 +160,32 @@ class _ViewProfileState extends State<ViewProfile> {
           ),
         );
       }),
+      bottomNavigationBar: BottomAppBar(
+        color: Color.fromARGB(255, 132, 198, 228),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.home),
+              color: Colors.black,
+              iconSize: 30,
+            ),
+            IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.favorite),
+              color: Colors.black,
+              iconSize: 30,
+            ),
+            IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.restart_alt),
+              color: Colors.black,
+              iconSize: 30,
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
