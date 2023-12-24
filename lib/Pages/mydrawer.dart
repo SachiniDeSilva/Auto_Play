@@ -1,5 +1,4 @@
 
-
 import 'package:auto_play/Pages/view_profile.dart';
 import 'package:flutter/material.dart';
 

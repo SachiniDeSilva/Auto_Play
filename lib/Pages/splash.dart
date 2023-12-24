@@ -1,10 +1,9 @@
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:auto_play/Pages/home.dart';
+
+import 'home.dart';
 
 class Splash extends StatefulWidget {
-  const Splash({Key? key}):super(key: key);
+  const Splash({Key? key}) : super(key: key);
 
   @override
   State<Splash> createState() => _SplashState();
@@ -12,13 +11,14 @@ class Splash extends StatefulWidget {
 
 class _SplashState extends State<Splash> {
   @override
-  void initState(){
+  void initState() {
     super.initState();
-    Future.delayed(const Duration(seconds: 3), (){
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> const Home() ));
-
+    Future.delayed(const Duration(seconds: 3), () {
+      Navigator.pushReplacement(
+          context, MaterialPageRoute(builder: (context) => const Home()));
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,13 +27,18 @@ class _SplashState extends State<Splash> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset("assets/Group_6.png", height: 130,),
-            const SizedBox(height: 30,),
+            Image.asset(
+              "assets/Group_6.png",
+              height: 130,
+            ),
+            const SizedBox(
+              height: 30,
+            ),
             //if(Platform.isIOS)
-              //const CupertinoActivityIndicator(
-                //radius: 15,
-             // )
-           // else
+            //const CupertinoActivityIndicator(
+            //radius: 15,
+            // )
+            // else
             const CircularProgressIndicator(
               color: Colors.blue,
             )
