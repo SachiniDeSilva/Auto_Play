@@ -1,6 +1,6 @@
-import 'package:auto_play_project/Pages/mydrawer.dart';
+// ignore: depend_on_referenced_packages
+import 'package:auto_play/Pages/mydrawer.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 
 class ViewProfile extends StatefulWidget {
   const ViewProfile({super.key});
@@ -15,7 +15,7 @@ class _ViewProfileState extends State<ViewProfile> {
     return Scaffold(
       body: Builder(builder: (context) {
         return Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             gradient: LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
@@ -28,13 +28,13 @@ class _ViewProfileState extends State<ViewProfile> {
               child: Column(
                 children: [
                   Padding(
-                    padding: EdgeInsets.only(right: 300.0),
+                    padding: const EdgeInsets.only(right: 300.0),
                     child: IconButton(
                       color: Colors.black,
                       onPressed: () {
-                        Navigator.pop(context, mydrawer());
+                        Navigator.pop(context, const MyDrawer());
                       },
-                      icon: Icon(Icons.arrow_back),
+                      icon: const Icon(Icons.arrow_back),
                     ),
                   ),
                   ClipOval(
@@ -58,8 +58,8 @@ class _ViewProfileState extends State<ViewProfile> {
                             leading: Image.asset('assets/􀉩.png'),
                             title: TextButton(
                               onPressed: () {},
-                              child: Padding(
-                                padding: const EdgeInsets.only(right: 160),
+                              child: const Padding(
+                                padding: EdgeInsets.only(right: 160),
                                 child: Text(
                                   'Edit Profile',
                                   style: TextStyle(
@@ -71,7 +71,7 @@ class _ViewProfileState extends State<ViewProfile> {
                               ),
                             ),
                           ),
-                          Divider(
+                          const Divider(
                             height: 8,
                             color: Color.fromARGB(152, 158, 158, 158),
                             thickness: 3,
@@ -80,8 +80,8 @@ class _ViewProfileState extends State<ViewProfile> {
                             leading: Image.asset('assets/􀣋.png'),
                             title: TextButton(
                               onPressed: () {},
-                              child: Padding(
-                                padding: const EdgeInsets.only(right: 190),
+                              child: const Padding(
+                                padding: EdgeInsets.only(right: 190),
                                 child: Text(
                                   'Settings',
                                   style: TextStyle(
@@ -93,7 +93,7 @@ class _ViewProfileState extends State<ViewProfile> {
                               ),
                             ),
                           ),
-                          Divider(
+                          const Divider(
                             height: 8,
                             color: Color.fromARGB(152, 158, 158, 158),
                             thickness: 3,
@@ -102,8 +102,8 @@ class _ViewProfileState extends State<ViewProfile> {
                             leading: Image.asset('assets/↳Color.png'),
                             title: TextButton(
                               onPressed: () {},
-                              child: Padding(
-                                padding: const EdgeInsets.only(right: 145),
+                              child: const Padding(
+                                padding: EdgeInsets.only(right: 145),
                                 child: Text(
                                   'Notifications',
                                   style: TextStyle(
@@ -115,7 +115,7 @@ class _ViewProfileState extends State<ViewProfile> {
                               ),
                             ),
                           ),
-                          Divider(
+                          const Divider(
                             height: 8,
                             color: Color.fromARGB(152, 158, 158, 158),
                             thickness: 3,
@@ -123,8 +123,8 @@ class _ViewProfileState extends State<ViewProfile> {
                           ListTile(
                             title: TextButton(
                               onPressed: () {},
-                              child: Padding(
-                                padding: const EdgeInsets.only(right: 130),
+                              child: const Padding(
+                                padding: EdgeInsets.only(right: 130),
                                 child: Text(
                                   'Privacy',
                                   style: TextStyle(
@@ -135,8 +135,8 @@ class _ViewProfileState extends State<ViewProfile> {
                                 ),
                               ),
                             ),
-                            subtitle: Padding(
-                              padding: const EdgeInsets.only(left: 70),
+                            subtitle: const Padding(
+                              padding: EdgeInsets.only(left: 70),
                               child: Text(
                                 'Keep everything to me',
                                 style: TextStyle(
@@ -145,7 +145,7 @@ class _ViewProfileState extends State<ViewProfile> {
                               ),
                             ),
                           ),
-                          Divider(
+                          const Divider(
                             height: 8,
                             color: Color.fromARGB(152, 158, 158, 158),
                             thickness: 3,

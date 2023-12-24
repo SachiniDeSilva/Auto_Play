@@ -1,27 +1,28 @@
 import 'package:flutter/material.dart';
-import 'mydrawer.dart';
+import 'package:auto_play/Pages/mydrawer.dart';
 
 class Home extends StatelessWidget {
-  const Home({super.key});
+  const Home({Key? key}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: mydrawer(),
+      drawer: const MyDrawer(),
       floatingActionButtonLocation: FloatingActionButtonLocation.startDocked,
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Color.fromARGB(255, 2, 27, 48),
+        backgroundColor: const Color.fromARGB(255, 2, 27, 48),
         child: IconButton(
           color: Colors.white,
           iconSize: 40.0,
           onPressed: () {},
-          icon: Icon(Icons.home),
+          icon: const Icon(Icons.home),
         ),
         onPressed: () {},
       ),
       bottomNavigationBar: BottomAppBar(
-        color: Color.fromARGB(167, 250, 248, 248),
-        shape: CircularNotchedRectangle(),
+        color: const Color.fromARGB(167, 250, 248, 248),
+        shape: const CircularNotchedRectangle(),
         notchMargin: 10,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -32,21 +33,21 @@ class Home extends StatelessWidget {
                 color: Colors.black,
                 iconSize: 40.0,
                 onPressed: () {},
-                icon: Icon(Icons.favorite),
+                icon: const Icon(Icons.favorite),
               ),
             ),
             IconButton(
               color: Colors.black,
               iconSize: 40.0,
               onPressed: () {},
-              icon: Icon(Icons.restart_alt),
+              icon: const Icon(Icons.restart_alt),
             ),
           ],
         ),
       ),
       body: SingleChildScrollView(
         child: Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             image: DecorationImage(
               image: AssetImage('assets/OIP 1.png'),
               fit: BoxFit.cover,
@@ -60,7 +61,7 @@ class Home extends StatelessWidget {
                 child: Builder(builder: (context) {
                   return IconButton(
                     color: Colors.white,
-                    icon: Icon(Icons.menu),
+                    icon: const Icon(Icons.menu),
                     onPressed: () {
                       Scaffold.of(context).openDrawer();
                     },
@@ -73,9 +74,9 @@ class Home extends StatelessWidget {
                   height: 40.0,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(12.0),
-                    color: Color.fromARGB(193, 3, 168, 244),
+                    color: const Color.fromARGB(193, 3, 168, 244),
                   ),
-                  child: TextField(
+                  child: const TextField(
                     decoration: InputDecoration(
                       prefixIcon: Icon(Icons.search),
                     ),
@@ -86,7 +87,7 @@ class Home extends StatelessWidget {
                 padding: const EdgeInsets.all(40.0),
                 child: Container(
                   height: 450.0,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Color.fromARGB(49, 3, 168, 244),
                   ),
                   child: Column(
@@ -99,22 +100,23 @@ class Home extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.only(top: 10.0),
                         child: ElevatedButton(
-                          onPressed: () {},
-                          child: Text('Get Start'),
+                        
                           style: ElevatedButton.styleFrom(
-                              fixedSize: Size.fromWidth(150),
+                              fixedSize: const Size.fromWidth(150),
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(15)),
-                              backgroundColor: Color.fromARGB(255, 4, 21, 35),
-                              textStyle: TextStyle(
+                              backgroundColor: const Color.fromARGB(255, 4, 21, 35),
+                              textStyle: const TextStyle(
                                   fontSize: 20.0, fontWeight: FontWeight.bold)),
+                          onPressed: () {  },
+                          child: const Text('Get Start'),
                         ),
                       ),
                     ],
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 200,
               )
             ],
