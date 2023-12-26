@@ -44,13 +44,26 @@ class _EditProfileState extends State<EditProfile> {
                       ),
                     ),
                     ClipOval(
-                      child: Image.asset(
-                        'assets/Ellipse 14.png',
-                        width: 100.0,
+                      child: Stack(
+                        children: [
+                          Image.asset('assets/Ellipse 14.png'),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 75, top: 70),
+                            child: Container(
+                              width: 32,
+                              height: 32,
+                              child: FloatingActionButton(
+                                onPressed: () {},
+                                child: Icon(Icons.add_a_photo),
+                                backgroundColor: Colors.blue,
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.fromLTRB(20, 80, 20, 20),
+                      padding: const EdgeInsets.fromLTRB(20, 40, 20, 20),
                       child: Container(
                         height: 400.0,
                         decoration: BoxDecoration(
@@ -125,6 +138,33 @@ class _EditProfileState extends State<EditProfile> {
                             ],
                           ),
                         ),
+                      ),
+                    ),
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        children: [
+                          Container(
+                            child: Padding(
+                              padding: const EdgeInsets.only(right: 10),
+                              child: IconButton(
+                                onPressed: () {},
+                                icon: Icon(Icons.error),
+                                color: Colors.black,
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 16, right: 50),
+                            child: Text(
+                              'Changes made to your name and profile picture are\nvisible only on Autobeats',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontStyle: FontStyle.italic,
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ],
