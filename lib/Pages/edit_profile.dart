@@ -1,7 +1,7 @@
 import 'package:auto_play/Pages/view_profile.dart';
 import 'package:flutter/material.dart';
 
-import 'mydrawer.dart';
+
 
 class EditProfile extends StatefulWidget {
   const EditProfile({super.key});
