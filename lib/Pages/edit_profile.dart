@@ -1,0 +1,165 @@
+import 'package:auto_play/Pages/view_profile.dart';
+import 'package:flutter/material.dart';
+
+import 'mydrawer.dart';
+
+class EditProfile extends StatefulWidget {
+  const EditProfile({super.key});
+
+  @override
+  State<EditProfile> createState() => _EditProfileState();
+}
+
+class _EditProfileState extends State<EditProfile> {
+  TextEditingController _nameController = TextEditingController();
+  TextEditingController _emailController = TextEditingController();
+  TextEditingController _descriptionController = TextEditingController();
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: Builder(builder: (context) {
+          return Container(
+            height: 1000,
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [Colors.white, Colors.blue],
+              ),
+            ),
+            child: Center(
+              child: Padding(
+                padding: const EdgeInsets.only(top: 120.0),
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(right: 300.0),
+                      child: IconButton(
+                        color: Colors.black,
+                        onPressed: () {
+                          Navigator.pop(context, const ViewProfile());
+                        },
+                        icon: const Icon(Icons.arrow_back),
+                      ),
+                    ),
+                    ClipOval(
+                      child: Image.asset(
+                        'assets/Ellipse 14.png',
+                        width: 100.0,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(20, 80, 20, 20),
+                      child: Container(
+                        height: 400.0,
+                        decoration: BoxDecoration(
+                          color: Color.fromARGB(255, 5, 136, 244),
+                          border: Border.all(color: Colors.black),
+                          borderRadius: BorderRadius.circular(40),
+                        ),
+                        child: Form(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(30),
+                                child: TextFormField(
+                                  controller: _nameController,
+                                  decoration: InputDecoration(
+                                    labelText: 'Name',
+                                    labelStyle: TextStyle(
+                                        fontSize: 20.0,
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.bold),
+                                    hintText: 'my name',
+                                    hintStyle: TextStyle(
+                                        fontSize: 15.0,
+                                        fontStyle: FontStyle.italic,
+                                        color: Colors.black),
+                                    suffixIcon: Icon(Icons.edit),
+                                    suffixIconColor: Colors.black,
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(30),
+                                child: TextFormField(
+                                  controller: _emailController,
+                                  decoration: InputDecoration(
+                                    labelText: 'Email',
+                                    labelStyle: TextStyle(
+                                        fontSize: 20.0,
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.bold),
+                                    hintText: 'my email',
+                                    hintStyle: TextStyle(
+                                        fontSize: 15.0,
+                                        fontStyle: FontStyle.italic,
+                                        color: Colors.black),
+                                    suffixIcon: Icon(Icons.edit),
+                                    suffixIconColor: Colors.black,
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(30),
+                                child: TextFormField(
+                                  controller: _descriptionController,
+                                  decoration: InputDecoration(
+                                    labelText: 'Description',
+                                    labelStyle: TextStyle(
+                                        fontSize: 20.0,
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.bold),
+                                    hintText: 'add a description',
+                                    hintStyle: TextStyle(
+                                        fontSize: 15.0,
+                                        fontStyle: FontStyle.italic,
+                                        color: Colors.black),
+                                    suffixIcon: Icon(Icons.edit),
+                                    suffixIconColor: Colors.black,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          );
+        }),
+      ),
+      bottomNavigationBar: BottomAppBar(
+        color: Color.fromARGB(255, 92, 174, 240),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.home),
+              iconSize: 40,
+              color: Colors.black,
+            ),
+            IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.favorite),
+              iconSize: 40,
+              color: Colors.black,
+            ),
+            IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.restart_alt),
+              iconSize: 40,
+              color: Colors.black,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
