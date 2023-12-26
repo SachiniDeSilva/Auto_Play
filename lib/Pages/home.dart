@@ -1,9 +1,10 @@
+import 'package:auto_play/Pages/get_start.dart';
+import 'package:auto_play/Pages/get_start.dart';
 import 'package:flutter/material.dart';
 import 'package:auto_play/Pages/mydrawer.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
-
 
   @override
   Widget build(BuildContext context) {
@@ -100,15 +101,21 @@ class Home extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.only(top: 10.0),
                         child: ElevatedButton(
-                        
                           style: ElevatedButton.styleFrom(
                               fixedSize: const Size.fromWidth(150),
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(15)),
-                              backgroundColor: const Color.fromARGB(255, 4, 21, 35),
+                              backgroundColor:
+                                  const Color.fromARGB(255, 4, 21, 35),
                               textStyle: const TextStyle(
                                   fontSize: 20.0, fontWeight: FontWeight.bold)),
-                          onPressed: () {  },
+                          onPressed: () {
+                            Navigator.of(context).push(MaterialPageRoute(
+                              builder: (_) {
+                                return GetStart();
+                              },
+                            ));
+                          },
                           child: const Text('Get Start'),
                         ),
                       ),
