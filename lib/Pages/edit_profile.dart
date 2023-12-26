@@ -49,13 +49,13 @@ class _EditProfileState extends State<EditProfile> {
                           Image.asset('assets/Ellipse 14.png'),
                           Padding(
                             padding: const EdgeInsets.only(left: 75, top: 70),
-                            child: Container(
+                            child: SizedBox(
                               width: 32,
                               height: 32,
                               child: FloatingActionButton(
                                 onPressed: () {},
-                                child: Icon(Icons.add_a_photo),
                                 backgroundColor: Colors.blue,
+                                child: const Icon(Icons.add_a_photo),
                               ),
                             ),
                           ),
@@ -144,18 +144,16 @@ class _EditProfileState extends State<EditProfile> {
                       scrollDirection: Axis.horizontal,
                       child: Row(
                         children: [
-                          Container(
-                            child: Padding(
-                              padding: const EdgeInsets.only(right: 10),
-                              child: IconButton(
-                                onPressed: () {},
-                                icon: Icon(Icons.error),
-                                color: Colors.black,
-                              ),
+                          Padding(
+                            padding: const EdgeInsets.only(right: 10),
+                            child: IconButton(
+                              onPressed: () {},
+                              icon: const Icon(Icons.error),
+                              color: Colors.black,
                             ),
                           ),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 16, right: 50),
+                          const Padding(
+                            padding: EdgeInsets.only(top: 16, right: 50),
                             child: Text(
                               'Changes made to your name and profile picture are\nvisible only on Autobeats',
                               style: TextStyle(
