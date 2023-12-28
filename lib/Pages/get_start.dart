@@ -1,4 +1,7 @@
+import 'package:auto_play/Pages/home.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter/src/widgets/placeholder.dart';
 
 class GetStart extends StatefulWidget {
   const GetStart({super.key});
@@ -13,25 +16,25 @@ class _GetStartState extends State<GetStart> {
     return Scaffold(
       backgroundColor: Colors.white,
       bottomNavigationBar: BottomAppBar(
-        color: const Color.fromARGB(255, 205, 203, 203),
+        color: Color.fromARGB(255, 205, 203, 203),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             IconButton(
               onPressed: () {},
-              icon: const Icon(Icons.home),
+              icon: Icon(Icons.home),
               iconSize: 40,
               color: Colors.black,
             ),
             IconButton(
               onPressed: () {},
-              icon: const Icon(Icons.favorite),
+              icon: Icon(Icons.favorite),
               iconSize: 40,
               color: Colors.black,
             ),
             IconButton(
               onPressed: () {},
-              icon: const Icon(Icons.restart_alt),
+              icon: Icon(Icons.restart_alt),
               iconSize: 40,
               color: Colors.black,
             ),
@@ -45,33 +48,34 @@ class _GetStartState extends State<GetStart> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                SizedBox(
-                  height: 130,
+                Container(
                   child: Image.asset('assets/Group_6.png'),
+                  height: 130,
                 ),
-                Image.asset('assets/Ellipse 14.png'),
+                Container(
+                  child: Image.asset('assets/Ellipse 14.png'),
+                ),
               ],
             ),
             Padding(
               padding: const EdgeInsets.only(top: 150, bottom: 50),
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color.fromARGB(255, 4, 21, 35),
-                    fixedSize: const Size(200, 60)),
+                    backgroundColor: Color.fromARGB(255, 4, 21, 35),
+                    fixedSize: Size(200, 60)),
                 onPressed: () {},
-                child: const Text(
+                child: Text(
                   'Time',
-                  style:
-                      TextStyle(fontWeight: FontWeight.bold, fontSize: 25.0),
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25.0),
                 ),
               ),
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color.fromARGB(255, 4, 21, 35),
-                  fixedSize: const Size(200, 60)),
+                  backgroundColor: Color.fromARGB(255, 4, 21, 35),
+                  fixedSize: Size(200, 60)),
               onPressed: () {},
-              child: const Text(
+              child: Text(
                 'Weather',
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25.0),
               ),
