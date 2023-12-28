@@ -21,9 +21,7 @@ class _GetStartState extends State<GetStart> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             IconButton(
-              onPressed: () {
-                Navigator.pop(context, Home());
-              },
+              onPressed: () {},
               icon: Icon(Icons.home),
               iconSize: 40,
               color: Colors.black,
