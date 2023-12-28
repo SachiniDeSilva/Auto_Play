@@ -1,4 +1,5 @@
-
+import 'package:auto_play/Pages/favorite.dart';
+import 'package:auto_play/Pages/privacy_&_policy.dart';
 import 'package:auto_play/Pages/view_profile.dart';
 import 'package:flutter/material.dart';
 
@@ -63,7 +64,13 @@ class MyDrawer extends StatelessWidget {
                 child: Column(
                   children: [
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (_) {
+                            return Favorite();
+                          },
+                        ));
+                      },
                       child: const Padding(
                         padding: EdgeInsets.only(right: 120.0),
                         child: Text(
@@ -76,7 +83,13 @@ class MyDrawer extends StatelessWidget {
                       ),
                     ),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (_) {
+                            return PrivacyPolicy();
+                          },
+                        ));
+                      },
                       child: const Padding(
                         padding: EdgeInsets.only(left: 10.0, right: 50.0),
                         child: Text(

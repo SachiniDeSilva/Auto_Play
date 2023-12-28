@@ -1,3 +1,4 @@
+import 'package:auto_play/Pages/home.dart';
 import 'package:auto_play/Pages/view_profile.dart';
 import 'package:flutter/material.dart';
 
@@ -180,7 +181,9 @@ class _EditProfileState extends State<EditProfile> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pop(context, Home());
+              },
               icon: Icon(Icons.home),
               iconSize: 40,
               color: Colors.black,

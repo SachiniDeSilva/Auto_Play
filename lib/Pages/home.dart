@@ -1,3 +1,4 @@
+import 'package:auto_play/Pages/favorite.dart';
 import 'package:auto_play/Pages/get_start.dart';
 import 'package:auto_play/Pages/get_start.dart';
 import 'package:flutter/material.dart';
@@ -33,7 +34,13 @@ class Home extends StatelessWidget {
               child: IconButton(
                 color: Colors.black,
                 iconSize: 40.0,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (_) {
+                      return Favorite();
+                    },
+                  ));
+                },
                 icon: const Icon(Icons.favorite),
               ),
             ),

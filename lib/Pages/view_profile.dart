@@ -1,5 +1,6 @@
 // ignore: depend_on_referenced_packages
 import 'package:auto_play/Pages/edit_profile.dart';
+import 'package:auto_play/Pages/home.dart';
 import 'package:auto_play/Pages/mydrawer.dart';
 import 'package:flutter/material.dart';
 
@@ -173,7 +174,9 @@ class _ViewProfileState extends State<ViewProfile> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pop(context, Home());
+              },
               icon: Icon(Icons.home),
               iconSize: 40,
               color: Colors.black,
