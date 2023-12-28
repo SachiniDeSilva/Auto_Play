@@ -1,6 +1,5 @@
 import 'package:auto_play/Pages/favorite.dart';
 import 'package:auto_play/Pages/get_start.dart';
-import 'package:auto_play/Pages/get_start.dart';
 import 'package:flutter/material.dart';
 import 'package:auto_play/Pages/mydrawer.dart';
 
@@ -119,7 +118,7 @@ class Home extends StatelessWidget {
                           onPressed: () {
                             Navigator.of(context).push(MaterialPageRoute(
                               builder: (_) {
-                                return GetStart();
+                                return const GetStart();
                               },
                             ));
                           },

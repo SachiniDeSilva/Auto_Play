@@ -2,7 +2,7 @@ import 'package:auto_play/Pages/home.dart';
 import 'package:auto_play/Pages/view_profile.dart';
 import 'package:flutter/material.dart';
 
-import 'mydrawer.dart';
+
 
 class EditProfile extends StatefulWidget {
   const EditProfile({super.key});
@@ -12,9 +12,9 @@ class EditProfile extends StatefulWidget {
 }
 
 class _EditProfileState extends State<EditProfile> {
-  TextEditingController _nameController = TextEditingController();
-  TextEditingController _emailController = TextEditingController();
-  TextEditingController _descriptionController = TextEditingController();
+  final TextEditingController _nameController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _descriptionController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,13 +50,13 @@ class _EditProfileState extends State<EditProfile> {
                           Image.asset('assets/Ellipse 14.png'),
                           Padding(
                             padding: const EdgeInsets.only(left: 75, top: 70),
-                            child: Container(
+                            child: SizedBox(
                               width: 32,
                               height: 32,
                               child: FloatingActionButton(
                                 onPressed: () {},
-                                child: Icon(Icons.add_a_photo),
                                 backgroundColor: Colors.blue,
+                                child: const Icon(Icons.add_a_photo),
                               ),
                             ),
                           ),
@@ -68,7 +68,7 @@ class _EditProfileState extends State<EditProfile> {
                       child: Container(
                         height: 400.0,
                         decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 5, 136, 244),
+                          color: const Color.fromARGB(255, 5, 136, 244),
                           border: Border.all(color: Colors.black),
                           borderRadius: BorderRadius.circular(40),
                         ),
@@ -80,7 +80,7 @@ class _EditProfileState extends State<EditProfile> {
                                 padding: const EdgeInsets.all(30),
                                 child: TextFormField(
                                   controller: _nameController,
-                                  decoration: InputDecoration(
+                                  decoration: const InputDecoration(
                                     labelText: 'Name',
                                     labelStyle: TextStyle(
                                         fontSize: 20.0,
@@ -100,7 +100,7 @@ class _EditProfileState extends State<EditProfile> {
                                 padding: const EdgeInsets.all(30),
                                 child: TextFormField(
                                   controller: _emailController,
-                                  decoration: InputDecoration(
+                                  decoration: const InputDecoration(
                                     labelText: 'Email',
                                     labelStyle: TextStyle(
                                         fontSize: 20.0,
@@ -120,7 +120,7 @@ class _EditProfileState extends State<EditProfile> {
                                 padding: const EdgeInsets.all(30),
                                 child: TextFormField(
                                   controller: _descriptionController,
-                                  decoration: InputDecoration(
+                                  decoration: const InputDecoration(
                                     labelText: 'Description',
                                     labelStyle: TextStyle(
                                         fontSize: 20.0,
@@ -145,18 +145,16 @@ class _EditProfileState extends State<EditProfile> {
                       scrollDirection: Axis.horizontal,
                       child: Row(
                         children: [
-                          Container(
-                            child: Padding(
-                              padding: const EdgeInsets.only(right: 10),
-                              child: IconButton(
-                                onPressed: () {},
-                                icon: Icon(Icons.error),
-                                color: Colors.black,
-                              ),
+                          Padding(
+                            padding: const EdgeInsets.only(right: 10),
+                            child: IconButton(
+                              onPressed: () {},
+                              icon: const Icon(Icons.error),
+                              color: Colors.black,
                             ),
                           ),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 16, right: 50),
+                          const Padding(
+                            padding: EdgeInsets.only(top: 16, right: 50),
                             child: Text(
                               'Changes made to your name and profile picture are\nvisible only on Autobeats',
                               style: TextStyle(
@@ -176,25 +174,25 @@ class _EditProfileState extends State<EditProfile> {
         }),
       ),
       bottomNavigationBar: BottomAppBar(
-        color: Color.fromARGB(255, 92, 174, 240),
+        color: const Color.fromARGB(255, 92, 174, 240),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             IconButton(
               onPressed: () {},
-              icon: Icon(Icons.home),
+              icon: const Icon(Icons.home),
               iconSize: 40,
               color: Colors.black,
             ),
             IconButton(
               onPressed: () {},
-              icon: Icon(Icons.favorite),
+              icon: const Icon(Icons.favorite),
               iconSize: 40,
               color: Colors.black,
             ),
             IconButton(
               onPressed: () {},
-              icon: Icon(Icons.restart_alt),
+              icon: const Icon(Icons.restart_alt),
               iconSize: 40,
               color: Colors.black,
             ),
