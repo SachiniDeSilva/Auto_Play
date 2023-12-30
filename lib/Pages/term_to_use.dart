@@ -6,14 +6,14 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'edit_profile.dart';
 import 'home.dart';
 
-class PrivacyPolicy extends StatefulWidget {
-  const PrivacyPolicy({super.key});
+class TermUse extends StatefulWidget {
+  const TermUse({super.key});
 
   @override
-  State<PrivacyPolicy> createState() => _PrivacyPolicyState();
+  State<TermUse> createState() => _TermUseState();
 }
 
-class _PrivacyPolicyState extends State<PrivacyPolicy> {
+class _TermUseState extends State<TermUse> {
   bool isChecked = true;
   @override
   Widget build(BuildContext context) {
@@ -32,7 +32,7 @@ class _PrivacyPolicyState extends State<PrivacyPolicy> {
           Column(
             children: [
               Padding(
-                padding: const EdgeInsets.only(top: 60, right: 80),
+                padding: const EdgeInsets.only(top: 60, right: 180),
                 child: IconButton(
                   onPressed: () {
                     Navigator.pop(context, MyDrawer());
@@ -42,17 +42,22 @@ class _PrivacyPolicyState extends State<PrivacyPolicy> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 30, top: 30),
+                padding: const EdgeInsets.only(right: 80, top: 30),
                 child: Text(
-                  'Privacy Policy',
+                  'Terms to use',
                   style: TextStyle(
                       fontSize: 20.0,
                       fontWeight: FontWeight.bold,
                       color: Colors.black),
                 ),
               ),
-              SizedBox(
-                height: 100,
+              Padding(
+                padding: const EdgeInsets.only(left: 25, top: 10),
+                child: Text(
+                  'Last update : December 30th, 2023',
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold, color: Colors.black),
+                ),
               )
             ],
           ),
@@ -61,7 +66,7 @@ class _PrivacyPolicyState extends State<PrivacyPolicy> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Padding(
-                padding: const EdgeInsets.only(top: 600, left: 40),
+                padding: const EdgeInsets.only(top: 600, left: 30),
                 child: IconButton(
                   onPressed: () {
                     setState(() {
@@ -72,15 +77,17 @@ class _PrivacyPolicyState extends State<PrivacyPolicy> {
                   color: Colors.black,
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(top: 600, right: 75),
-                child: Text(
-                  'I agree to the privacy and policy',
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold,
-                      fontStyle: FontStyle.italic),
+              Flexible(
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 600, right: 65),
+                  child: Text(
+                    'I agree to the terms to use and I read the\npolicy notice',
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                        fontStyle: FontStyle.italic),
+                  ),
                 ),
               ),
             ],
@@ -143,7 +150,7 @@ class _PrivacyPolicyState extends State<PrivacyPolicy> {
             ),
             IconButton(
               onPressed: () {},
-              icon: Icon(Icons.favorite),
+              icon: Icon(Icons.notifications),
               iconSize: 40,
               color: Colors.black,
             ),
