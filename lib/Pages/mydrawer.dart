@@ -1,5 +1,6 @@
 import 'package:auto_play/Pages/favorite.dart';
 import 'package:auto_play/Pages/privacy_&_policy.dart';
+import 'package:auto_play/Pages/term_to_use.dart';
 import 'package:auto_play/Pages/view_profile.dart';
 import 'package:flutter/material.dart';
 
@@ -102,7 +103,13 @@ class MyDrawer extends StatelessWidget {
                       ),
                     ),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (_) {
+                            return TermUse();
+                          },
+                        ));
+                      },
                       child: const Padding(
                         padding: EdgeInsets.only(right: 82.0),
                         child: Text(
