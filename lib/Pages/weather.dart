@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
-class Time extends StatefulWidget {
-  const Time({super.key});
+class Weather extends StatefulWidget {
+  const Weather({super.key});
 
   @override
-  State<Time> createState() => _TimeState();
+  State<Weather> createState() => _WeatherState();
 }
 
-class _TimeState extends State<Time> {
+class _WeatherState extends State<Weather> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,52 +44,16 @@ class _TimeState extends State<Time> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 100),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Text(
-                    'Time',
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 25,
-                        fontWeight: FontWeight.bold),
-                  ),
-                  SizedBox(width: 10),
-                  Container(
-                    width: 100,
-                    child: TextField(
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 30,
-                          fontWeight: FontWeight.bold),
-                      decoration: InputDecoration(
-                        filled: true,
-                        fillColor: Color.fromARGB(80, 158, 158, 158),
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12)),
-                      ),
-                    ),
-                  ),
-                  SizedBox(width: 10),
-                  Container(
-                    width: 120,
-                    child: Stack(
-                      children: [
-                        Image.asset(
-                          'assets/SUN.png',
-                          fit: BoxFit.cover,
-                        ),
-                        TextField(
-                          decoration: InputDecoration(
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(30)),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
+              padding: const EdgeInsets.only(top: 150),
+              child: Center(
+                child: Text(
+                  'Identifying your\n       weather',
+                  style: TextStyle(
+                      color: Colors.blue,
+                      fontSize: 30,
+                      height: 1.5,
+                      fontWeight: FontWeight.bold),
+                ),
               ),
             ),
             SizedBox(

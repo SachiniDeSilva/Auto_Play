@@ -1,5 +1,6 @@
 import 'package:auto_play/Pages/home.dart';
 import 'package:auto_play/Pages/time.dart';
+import 'package:auto_play/Pages/weather.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
@@ -85,7 +86,13 @@ class _GetStartState extends State<GetStart> {
                       borderRadius: BorderRadius.circular(10)),
                   backgroundColor: Color.fromARGB(255, 4, 21, 35),
                   fixedSize: Size(200, 60)),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (_) {
+                    return Weather();
+                  },
+                ));
+              },
               child: Text(
                 'Weather',
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25.0),
