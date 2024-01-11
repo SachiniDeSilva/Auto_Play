@@ -61,7 +61,7 @@ class _ViewProfileState extends State<ViewProfile> {
                               onPressed: () {
                                 Navigator.of(context).push(MaterialPageRoute(
                                   builder: (_) {
-                                    return EditProfile();
+                                    return const EditProfile();
                                   },
                                 ));
                               },
@@ -168,25 +168,25 @@ class _ViewProfileState extends State<ViewProfile> {
         );
       }),
       bottomNavigationBar: BottomAppBar(
-        color: Color.fromARGB(255, 92, 174, 240),
+        color: const Color.fromARGB(255, 92, 174, 240),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             IconButton(
               onPressed: () {},
-              icon: Icon(Icons.home),
+              icon: const Icon(Icons.home),
               iconSize: 40,
               color: Colors.black,
             ),
             IconButton(
               onPressed: () {},
-              icon: Icon(Icons.favorite),
+              icon: const Icon(Icons.favorite),
               iconSize: 40,
               color: Colors.black,
             ),
             IconButton(
               onPressed: () {},
-              icon: Icon(Icons.restart_alt),
+              icon: const Icon(Icons.restart_alt),
               iconSize: 40,
               color: Colors.black,
             ),

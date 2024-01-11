@@ -11,9 +11,9 @@ class EditProfile extends StatefulWidget {
 }
 
 class _EditProfileState extends State<EditProfile> {
-  TextEditingController _nameController = TextEditingController();
-  TextEditingController _emailController = TextEditingController();
-  TextEditingController _descriptionController = TextEditingController();
+  final TextEditingController _nameController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _descriptionController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,7 +54,7 @@ class _EditProfileState extends State<EditProfile> {
                       child: Container(
                         height: 400.0,
                         decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 5, 136, 244),
+                          color: const Color.fromARGB(255, 5, 136, 244),
                           border: Border.all(color: Colors.black),
                           borderRadius: BorderRadius.circular(40),
                         ),
@@ -66,7 +66,7 @@ class _EditProfileState extends State<EditProfile> {
                                 padding: const EdgeInsets.all(30),
                                 child: TextFormField(
                                   controller: _nameController,
-                                  decoration: InputDecoration(
+                                  decoration: const InputDecoration(
                                     labelText: 'Name',
                                     labelStyle: TextStyle(
                                         fontSize: 20.0,
@@ -86,7 +86,7 @@ class _EditProfileState extends State<EditProfile> {
                                 padding: const EdgeInsets.all(30),
                                 child: TextFormField(
                                   controller: _emailController,
-                                  decoration: InputDecoration(
+                                  decoration: const InputDecoration(
                                     labelText: 'Email',
                                     labelStyle: TextStyle(
                                         fontSize: 20.0,
@@ -106,7 +106,7 @@ class _EditProfileState extends State<EditProfile> {
                                 padding: const EdgeInsets.all(30),
                                 child: TextFormField(
                                   controller: _descriptionController,
-                                  decoration: InputDecoration(
+                                  decoration: const InputDecoration(
                                     labelText: 'Description',
                                     labelStyle: TextStyle(
                                         fontSize: 20.0,
@@ -135,25 +135,25 @@ class _EditProfileState extends State<EditProfile> {
         }),
       ),
       bottomNavigationBar: BottomAppBar(
-        color: Color.fromARGB(255, 92, 174, 240),
+        color: const Color.fromARGB(255, 92, 174, 240),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             IconButton(
               onPressed: () {},
-              icon: Icon(Icons.home),
+              icon: const Icon(Icons.home),
               iconSize: 40,
               color: Colors.black,
             ),
             IconButton(
               onPressed: () {},
-              icon: Icon(Icons.favorite),
+              icon: const Icon(Icons.favorite),
               iconSize: 40,
               color: Colors.black,
             ),
             IconButton(
               onPressed: () {},
-              icon: Icon(Icons.restart_alt),
+              icon: const Icon(Icons.restart_alt),
               iconSize: 40,
               color: Colors.black,
             ),
