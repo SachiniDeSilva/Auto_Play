@@ -11,8 +11,8 @@ class ViewProfile extends StatefulWidget {
 }
 
 class _ViewProfileState extends State<ViewProfile> {
-  bool isSwitched = true;
-  bool isSwitched2 = true;
+  bool isSwitched = false;
+  bool isSwitched2 = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
