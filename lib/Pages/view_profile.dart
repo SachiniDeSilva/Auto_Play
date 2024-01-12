@@ -10,9 +10,9 @@ class ViewProfile extends StatefulWidget {
   State<ViewProfile> createState() => _ViewProfileState();
 }
 
-class _ViewProfileState extends State<ViewProfile> {
-  bool isSwitched = true;
-  bool isSwitched2 = true;
+class _ViewProfileState extends State<ViewProfile>{
+  bool isSwitched = false;
+  bool isSwitched2 = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
