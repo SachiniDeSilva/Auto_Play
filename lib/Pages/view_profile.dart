@@ -1,4 +1,3 @@
-// ignore: depend_on_referenced_packages
 import 'package:auto_play/Pages/edit_profile.dart';
 import 'package:auto_play/Pages/home.dart';
 import 'package:auto_play/Pages/mydrawer.dart';
@@ -12,6 +11,8 @@ class ViewProfile extends StatefulWidget {
 }
 
 class _ViewProfileState extends State<ViewProfile> {
+  bool isSwitched = true;
+  bool isSwitched2 = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -111,7 +112,7 @@ class _ViewProfileState extends State<ViewProfile> {
                             title: TextButton(
                               onPressed: () {},
                               child: const Padding(
-                                padding: EdgeInsets.only(right: 145),
+                                padding: EdgeInsets.only(right: 70),
                                 child: Text(
                                   'Notifications',
                                   style: TextStyle(
@@ -121,6 +122,19 @@ class _ViewProfileState extends State<ViewProfile> {
                                   ),
                                 ),
                               ),
+                            ),
+                            trailing: new Switch(
+                              value: isSwitched,
+                              activeColor: Color.fromARGB(255, 4, 21, 35),
+                              activeTrackColor: Colors.grey,
+                              inactiveThumbColor: Colors.white,
+                              inactiveTrackColor: Colors.grey,
+                              onChanged: (value) {
+                                setState(() {
+                                  isSwitched = value;
+                                  if (value == true) {}
+                                });
+                              },
                             ),
                           ),
                           const Divider(
@@ -132,7 +146,7 @@ class _ViewProfileState extends State<ViewProfile> {
                             title: TextButton(
                               onPressed: () {},
                               child: const Padding(
-                                padding: EdgeInsets.only(right: 130),
+                                padding: EdgeInsets.only(right: 60),
                                 child: Text(
                                   'Privacy',
                                   style: TextStyle(
@@ -142,6 +156,19 @@ class _ViewProfileState extends State<ViewProfile> {
                                   ),
                                 ),
                               ),
+                            ),
+                            trailing: new Switch(
+                              value: isSwitched2,
+                              activeColor: Color.fromARGB(255, 4, 21, 35),
+                              activeTrackColor: Colors.grey,
+                              inactiveThumbColor: Colors.white,
+                              inactiveTrackColor: Colors.grey,
+                              onChanged: (value) {
+                                setState(() {
+                                  isSwitched2 = value;
+                                  if (value == true) {}
+                                });
+                              },
                             ),
                             subtitle: const Padding(
                               padding: EdgeInsets.only(left: 70),
