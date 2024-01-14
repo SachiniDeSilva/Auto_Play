@@ -9,6 +9,8 @@ class ForgetPw1 extends StatefulWidget {
 
 class _ForgetPw1State extends State<ForgetPw1> {
   bool _isPasswordVisible = false;
+
+  bool _isPasswordVisible1 = false;
   Icon _visibleIcon = Icon(Icons.visibility);
   Icon _hiddenIcon = Icon(Icons.visibility_off);
   @override
@@ -76,10 +78,13 @@ class _ForgetPw1State extends State<ForgetPw1> {
                       decoration: InputDecoration(
                         prefixIcon: Icon(Icons.lock),
                         suffixIcon: IconButton(
-                          icon: _isPasswordVisible ? _visibleIcon : _hiddenIcon,
+
+                          icon:
+                              _isPasswordVisible1 ? _visibleIcon : _hiddenIcon,
                           onPressed: () {
                             setState(() {
-                              _isPasswordVisible = !_isPasswordVisible;
+                              _isPasswordVisible1 = !_isPasswordVisible1;
+
                             });
                           },
                         ),
