@@ -1,17 +1,13 @@
 import 'package:flutter/material.dart';
 
-class ForgetPw1 extends StatefulWidget {
-  const ForgetPw1({super.key});
+class ForgetPw2 extends StatefulWidget {
+  const ForgetPw2({super.key});
 
   @override
-  State<ForgetPw1> createState() => _ForgetPw1State();
+  State<ForgetPw2> createState() => _ForgetPw2State();
 }
 
-class _ForgetPw1State extends State<ForgetPw1> {
-  bool _isPasswordVisible = false;
-  bool _isPasswordVisible1 = false;
-  Icon _visibleIcon = Icon(Icons.visibility);
-  Icon _hiddenIcon = Icon(Icons.visibility_off);
+class _ForgetPw2State extends State<ForgetPw2> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -45,9 +41,9 @@ class _ForgetPw1State extends State<ForgetPw1> {
                 children: [
                   Center(
                     child: Padding(
-                      padding: const EdgeInsets.only(top: 200),
+                      padding: const EdgeInsets.only(top: 170),
                       child: Text(
-                        'Hello welcome to login',
+                        'FORGOT PASSWORD',
                         style: TextStyle(
                             color: Colors.black,
                             fontSize: 20,
@@ -56,42 +52,26 @@ class _ForgetPw1State extends State<ForgetPw1> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: TextField(
-                      decoration: InputDecoration(
-                        prefixIcon: Icon(
-                          Icons.email,
-                          color: Colors.grey,
-                        ),
-                        suffixIcon: IconButton(
-                          color: Colors.grey,
-                          icon: _isPasswordVisible ? _visibleIcon : _hiddenIcon,
-                          onPressed: () {
-                            setState(() {
-                              _isPasswordVisible = !_isPasswordVisible;
-                            });
-                          },
-                        ),
-                      ),
+                    padding: const EdgeInsets.only(top: 48),
+                    child: Text(
+                      'ENTER YOUR EMAIL',
+                      style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                          fontStyle: FontStyle.italic),
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(16.0),
+                    padding: const EdgeInsets.all(36.0),
                     child: TextField(
+                      style: TextStyle(fontSize: 20),
                       decoration: InputDecoration(
-                        prefixIcon: Icon(
-                          Icons.lock,
-                          color: Colors.grey,
-                        ),
-                        suffixIcon: IconButton(
-                          color: Colors.grey,
-                          icon:
-                              _isPasswordVisible1 ? _visibleIcon : _hiddenIcon,
-                          onPressed: () {
-                            setState(() {
-                              _isPasswordVisible1 = !_isPasswordVisible1;
-                            });
-                          },
+                        filled: true,
+                        fillColor: Colors.white,
+                        border: OutlineInputBorder(
+                          borderSide: BorderSide.none,
+                          borderRadius: BorderRadius.circular(32),
                         ),
                       ),
                     ),
@@ -102,32 +82,46 @@ class _ForgetPw1State extends State<ForgetPw1> {
                 child: Column(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(top: 400),
-                      child: GestureDetector(
-                        onTap: () {},
-                        child: Text(
-                          'Forgotten Password',
-                          style: TextStyle(
-                              color: Colors.blue,
+                      padding: const EdgeInsets.only(top: 370),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            'BACK IN TO',
+                            style: TextStyle(
+                              color: Colors.white,
                               fontWeight: FontWeight.bold,
                               fontSize: 18,
                               fontStyle: FontStyle.italic,
-                              decoration: TextDecoration.underline),
-                        ),
+                            ),
+                          ),
+                          GestureDetector(
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 16),
+                              child: Text(
+                                'SIGNIN',
+                                style: TextStyle(
+                                    color: Color.fromARGB(255, 4, 131, 236),
+                                    fontSize: 18,
+                                    decoration: TextDecoration.underline),
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(top: 32),
+                      padding: const EdgeInsets.only(top: 16),
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          fixedSize: Size(200, 50),
+                          fixedSize: Size(150, 40),
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(30)),
                           backgroundColor: Color.fromARGB(255, 4, 21, 35),
                         ),
                         onPressed: () {},
                         child: Text(
-                          'LOGIN',
+                          'SEND',
                           style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
@@ -154,8 +148,8 @@ class _ForgetPw1State extends State<ForgetPw1> {
                           IconButton(
                             onPressed: () {},
                             icon: Icon(Icons.facebook),
-                            color: Colors.black,
                             iconSize: 30,
+                            color: Colors.black,
                           ),
                           IconButton(
                             onPressed: () {},
@@ -163,39 +157,43 @@ class _ForgetPw1State extends State<ForgetPw1> {
                               'assets/flat-color-icons_google.png',
                             ),
                           ),
+                          IconButton(
+                            onPressed: () {},
+                            icon: Icon(Icons.apple),
+                            iconSize: 30,
+                            color: Colors.black,
+                          ),
                         ],
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(top: 36),
-                      child: Row(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(left: 64),
-                            child: Text(
-                              'Havent an account?',
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.bold,
-                                  fontStyle: FontStyle.italic,
-                                  fontSize: 20),
-                            ),
-                          ),
-                          GestureDetector(
-                            onTap: () {},
-                            child: Padding(
-                              padding: const EdgeInsets.only(left: 24),
-                              child: Text(
-                                'sign up',
-                                style: TextStyle(
-                                    color: Color.fromARGB(255, 5, 137, 245),
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 18,
-                                    decoration: TextDecoration.underline),
-                              ),
-                            ),
-                          ),
-                        ],
+                      padding: const EdgeInsets.only(top: 24),
+                      child: Text(
+                        'DO YOU HAVENT AN ACCOUNT?',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontStyle: FontStyle.italic,
+                            fontSize: 14),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 24),
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          fixedSize: Size(250, 40),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(30)),
+                          backgroundColor: Color.fromARGB(255, 4, 21, 35),
+                        ),
+                        onPressed: () {},
+                        child: Text(
+                          'SIGNUP',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18),
+                        ),
                       ),
                     ),
                   ],

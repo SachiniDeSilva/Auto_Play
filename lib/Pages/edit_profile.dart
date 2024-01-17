@@ -2,8 +2,6 @@ import 'package:auto_play/Pages/home.dart';
 import 'package:auto_play/Pages/view_profile.dart';
 import 'package:flutter/material.dart';
 
-
-
 class EditProfile extends StatefulWidget {
   const EditProfile({super.key});
 
