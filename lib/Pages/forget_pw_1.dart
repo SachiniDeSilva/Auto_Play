@@ -85,11 +85,7 @@ class _ForgetPw1State extends State<ForgetPw1> {
                           color: Colors.grey,
                         ),
                         suffixIcon: IconButton(
-<<<<<<< HEAD
                           color: Colors.grey,
-=======
-
->>>>>>> a6bf948a77a2ba2c6b9bd2fca08d746d41dd3be6
                           icon:
                               _isPasswordVisible1 ? _visibleIcon : _hiddenIcon,
                           onPressed: () {
