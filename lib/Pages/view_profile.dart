@@ -1,4 +1,6 @@
 import 'package:auto_play/Pages/edit_profile.dart';
+import 'package:auto_play/Pages/forget_pw_1.dart';
+import 'package:auto_play/Pages/forget_pw_2.dart';
 import 'package:auto_play/Pages/home.dart';
 import 'package:auto_play/Pages/mydrawer.dart';
 import 'package:flutter/material.dart';
@@ -10,7 +12,7 @@ class ViewProfile extends StatefulWidget {
   State<ViewProfile> createState() => _ViewProfileState();
 }
 
-class _ViewProfileState extends State<ViewProfile>{
+class _ViewProfileState extends State<ViewProfile> {
   bool isSwitched = false;
   bool isSwitched2 = false;
   @override
