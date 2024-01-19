@@ -91,7 +91,6 @@ class _ForgetPw1State extends State<ForgetPw1> {
                           onPressed: () {
                             setState(() {
                               _isPasswordVisible1 = !_isPasswordVisible1;
-
                             });
                           },
                         ),
