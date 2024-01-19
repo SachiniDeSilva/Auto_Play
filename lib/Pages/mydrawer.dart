@@ -65,6 +65,8 @@ class MyDrawer extends StatelessWidget {
                 child: Column(
                   children: [
                     TextButton(
+                      style: ButtonStyle(
+                          overlayColor: MaterialStatePropertyAll(Colors.blue)),
                       onPressed: () {
                         Navigator.of(context).push(MaterialPageRoute(
                           builder: (_) {
@@ -84,6 +86,8 @@ class MyDrawer extends StatelessWidget {
                       ),
                     ),
                     TextButton(
+                      style: ButtonStyle(
+                          overlayColor: MaterialStatePropertyAll(Colors.blue)),
                       onPressed: () {
                         Navigator.of(context).push(MaterialPageRoute(
                           builder: (_) {
@@ -103,6 +107,8 @@ class MyDrawer extends StatelessWidget {
                       ),
                     ),
                     TextButton(
+                      style: ButtonStyle(
+                          overlayColor: MaterialStatePropertyAll(Colors.blue)),
                       onPressed: () {
                         Navigator.of(context).push(MaterialPageRoute(
                           builder: (_) {
@@ -122,6 +128,8 @@ class MyDrawer extends StatelessWidget {
                       ),
                     ),
                     TextButton(
+                      style: ButtonStyle(
+                          overlayColor: MaterialStatePropertyAll(Colors.blue)),
                       onPressed: () {},
                       child: const Padding(
                         padding: EdgeInsets.only(right: 60.0),

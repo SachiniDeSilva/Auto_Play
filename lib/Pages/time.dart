@@ -1,3 +1,4 @@
+import 'package:auto_play/Pages/day_music_1.dart';
 import 'package:auto_play/Pages/get_start.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -11,7 +12,13 @@ class Time extends StatefulWidget {
 }
 
 class _TimeState extends State<Time> {
+  late TextEditingController timeController;
   @override
+  void initState() {
+    super.initState();
+    timeController = TextEditingController();
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
@@ -76,15 +83,9 @@ class _TimeState extends State<Time> {
                     width: 120,
                     child: Stack(
                       children: [
-                        Image.asset(
-                          'assets/SUN.png',
-                          fit: BoxFit.cover,
-                        ),
-                        TextField(
-                          decoration: InputDecoration(
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(30)),
-                          ),
+                        TextButton(
+                          onPressed: () {},
+                          child: Image.asset('assets/MOON.png'),
                         ),
                       ],
                     ),
@@ -101,7 +102,14 @@ class _TimeState extends State<Time> {
                       borderRadius: BorderRadius.circular(10)),
                   backgroundColor: Color.fromARGB(255, 4, 21, 35),
                   fixedSize: Size(200, 50)),
-              onPressed: () {},
+              onPressed: () {
+                String enteredTime = timeController.text;
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (_) {
+                    return Day_Music_1();
+                  },
+                ));
+              },
               child: Text(
                 'Submit',
                 style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),

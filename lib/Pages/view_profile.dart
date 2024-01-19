@@ -62,6 +62,9 @@ class _ViewProfileState extends State<ViewProfile> {
                           ListTile(
                             leading: Image.asset('assets/􀉩.png'),
                             title: TextButton(
+                              style: ButtonStyle(
+                                  overlayColor:
+                                      MaterialStatePropertyAll(Colors.blue)),
                               onPressed: () {
                                 Navigator.of(context).push(MaterialPageRoute(
                                   builder: (_) {
@@ -90,6 +93,9 @@ class _ViewProfileState extends State<ViewProfile> {
                           ListTile(
                             leading: Image.asset('assets/􀣋.png'),
                             title: TextButton(
+                              style: ButtonStyle(
+                                  overlayColor:
+                                      MaterialStatePropertyAll(Colors.blue)),
                               onPressed: () {},
                               child: const Padding(
                                 padding: EdgeInsets.only(right: 190),
@@ -112,6 +118,9 @@ class _ViewProfileState extends State<ViewProfile> {
                           ListTile(
                             leading: Image.asset('assets/↳Color.png'),
                             title: TextButton(
+                              style: ButtonStyle(
+                                  overlayColor:
+                                      MaterialStatePropertyAll(Colors.blue)),
                               onPressed: () {},
                               child: const Padding(
                                 padding: EdgeInsets.only(right: 70),
@@ -146,6 +155,9 @@ class _ViewProfileState extends State<ViewProfile> {
                           ),
                           ListTile(
                             title: TextButton(
+                              style: ButtonStyle(
+                                  overlayColor:
+                                      MaterialStatePropertyAll(Colors.blue)),
                               onPressed: () {},
                               child: const Padding(
                                 padding: EdgeInsets.only(right: 60),
