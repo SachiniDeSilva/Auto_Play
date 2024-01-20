@@ -53,10 +53,11 @@ class _GetStartState extends State<GetStart> {
                 children: [
                   Container(
                     child: Image.asset('assets/Group_6.png'),
-                    height: 130,
+                    height: 100,
                   ),
                   Container(
                     child: Image.asset('assets/Ellipse 14.png'),
+                    height: 100,
                   ),
                 ],
               ),

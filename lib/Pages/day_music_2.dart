@@ -1,17 +1,20 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:auto_play/Pages/get_start.dart';
 import 'package:auto_play/Pages/time.dart';
+import 'package:auto_play/Pages/weather.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
-class Day_Music_1 extends StatefulWidget {
-  const Day_Music_1({super.key});
+class Day_Music_2 extends StatefulWidget {
+  const Day_Music_2({super.key});
 
   @override
-  State<Day_Music_1> createState() => _Day_Music_1State();
+  State<Day_Music_2> createState() => _Day_Music_2State();
 }
 
-class _Day_Music_1State extends State<Day_Music_1> {
+class _Day_Music_2State extends State<Day_Music_2> {
   bool _isPlay1 = true;
   bool _isPlay2 = true;
   bool _isPlay3 = true;
@@ -25,7 +28,7 @@ class _Day_Music_1State extends State<Day_Music_1> {
   Icon _playIcon = Icon(Icons.play_arrow);
   Icon _pauseIcon = Icon(Icons.pause);
 
-  bool isSwitched = true;
+  bool isSwitched = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -105,7 +108,7 @@ class _Day_Music_1State extends State<Day_Music_1> {
                             children: [
                               Padding(
                                 padding: const EdgeInsets.only(left: 40),
-                                child: Image.asset('assets/MOON.png'),
+                                child: Image.asset('assets/SUN.png'),
                               )
                             ],
                           ),
@@ -122,8 +125,9 @@ class _Day_Music_1State extends State<Day_Music_1> {
                 color: Color.fromARGB(126, 158, 158, 158),
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.grey,
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12)),
+                          borderRadius: BorderRadius.circular(10)),
                       fixedSize: Size(150, 30)),
                   onPressed: null,
                   child: Text(
@@ -136,13 +140,16 @@ class _Day_Music_1State extends State<Day_Music_1> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 200, top: 30),
-                child: Text(
-                  'Hello Good Night',
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18),
+                padding: const EdgeInsets.only(left: 200),
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 30),
+                  child: Text(
+                    'Hello Good Morning',
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18),
+                  ),
                 ),
               ),
               Padding(
