@@ -1,17 +1,18 @@
 import 'package:auto_play/Pages/get_start.dart';
 import 'package:auto_play/Pages/time.dart';
+import 'package:auto_play/Pages/weather.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
-class Day_Music_1 extends StatefulWidget {
-  const Day_Music_1({super.key});
+class Weather_1 extends StatefulWidget {
+  const Weather_1({super.key});
 
   @override
-  State<Day_Music_1> createState() => _Day_Music_1State();
+  State<Weather_1> createState() => _Weather_1State();
 }
 
-class _Day_Music_1State extends State<Day_Music_1> {
+class _Weather_1State extends State<Weather_1> {
   bool _isPlay1 = true;
   bool _isPlay2 = true;
   bool _isPlay3 = true;
@@ -25,7 +26,6 @@ class _Day_Music_1State extends State<Day_Music_1> {
   Icon _playIcon = Icon(Icons.play_arrow);
   Icon _pauseIcon = Icon(Icons.pause);
 
-  bool isSwitched = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,7 +35,6 @@ class _Day_Music_1State extends State<Day_Music_1> {
           padding: EdgeInsets.only(top: 60),
           child: Column(
             children: [
-
               Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Row(
@@ -51,24 +50,12 @@ class _Day_Music_1State extends State<Day_Music_1> {
                     ),
                   ],
                 ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    child: Image.asset('assets/Group_6.png'),
-                    height: 130,
-                  ),
-                  Container(
-                    child: Image.asset('assets/Ellipse 14.png'),
-                  ),
-                ],
-
               ),
               Padding(
                 padding: const EdgeInsets.only(right: 320),
                 child: IconButton(
                   onPressed: () {
-                    Navigator.pop(context, Time());
+                    Navigator.pop(context, Weather());
                   },
                   icon: Icon(
                     Icons.arrow_back,
@@ -77,109 +64,24 @@ class _Day_Music_1State extends State<Day_Music_1> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(),
-
-                child: Padding(
-                  padding: const EdgeInsets.only(left: 40),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Text(
-                        'Time',
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 25,
-                            fontWeight: FontWeight.bold),
-                      ),
-                      SizedBox(width: 10),
-                      Container(
-                        width: 100,
-                        height: 50,
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 5),
-                          child: TextField(
-                            style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 25,
-                                fontWeight: FontWeight.bold),
-                            decoration: InputDecoration(
-                              filled: true,
-                              fillColor: Color.fromARGB(80, 158, 158, 158),
-                              border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(12)),
-                            ),
-                          ),
-                        ),
-                      ),
-                      SizedBox(width: 10),
-                      Expanded(
-                        child: Container(
-                          width: 300,
-                          child: Stack(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.only(left: 40),
-                                child: Image.asset('assets/MOON.png'),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-
+                padding: const EdgeInsets.only(bottom: 30),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
-                      'Time',
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 25,
-                          fontWeight: FontWeight.bold),
-                    ),
-                    SizedBox(width: 10),
-                    Container(
-                      width: 100,
-                      child: TextField(
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 30,
-                            fontWeight: FontWeight.bold),
-                        decoration: InputDecoration(
-                          filled: true,
-                          fillColor: Color.fromARGB(80, 158, 158, 158),
-                          border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(12)),
-                        ),
-                      ),
-                    ),
-                    SizedBox(width: 10),
-                    Container(
-                      width: 120,
-                      child: Stack(
-                        children: [
-                          TextButton(
-                            onPressed: () {},
-                            child: Image.asset('assets/MOON.png'),
-                          ),
-                        ],
-                      ),
-                    ),
+                    Image.asset(
+                      'assets/Group 84.png',
+                      height: 100,
+                    )
                   ],
-
                 ),
               ),
-              SizedBox(
-                height: 50,
-              ),
-
               Container(
                 color: Color.fromARGB(126, 158, 158, 158),
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.grey,
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12)),
+                          borderRadius: BorderRadius.circular(10)),
                       fixedSize: Size(150, 30)),
                   onPressed: null,
                   child: Text(
@@ -189,32 +91,6 @@ class _Day_Music_1State extends State<Day_Music_1> {
                         fontWeight: FontWeight.bold,
                         color: Color.fromARGB(112, 0, 0, 0)),
                   ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 200, top: 30),
-
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.grey,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10)),
-                    fixedSize: Size(200, 50)),
-                onPressed: null,
-                child: Text(
-                  'Submit',
-                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 200),
-
-                child: Text(
-                  'Hello Good Night',
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18),
                 ),
               ),
               Padding(
@@ -495,7 +371,7 @@ class _Day_Music_1State extends State<Day_Music_1> {
         ),
       ),
       bottomNavigationBar: BottomAppBar(
-        color: Color.fromARGB(165, 78, 77, 77),
+        color: Color.fromARGB(255, 205, 203, 203),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [

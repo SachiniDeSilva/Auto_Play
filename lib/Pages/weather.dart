@@ -1,4 +1,5 @@
 import 'package:auto_play/Pages/get_start.dart';
+import 'package:auto_play/Pages/weather_1.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
@@ -24,10 +25,11 @@ class _WeatherState extends State<Weather> {
               children: [
                 Container(
                   child: Image.asset('assets/Group_6.png'),
-                  height: 130,
+                  height: 100,
                 ),
                 Container(
                   child: Image.asset('assets/Ellipse 14.png'),
+                  height: 100,
                 ),
               ],
             ),
@@ -65,7 +67,13 @@ class _WeatherState extends State<Weather> {
                       borderRadius: BorderRadius.circular(10)),
                   backgroundColor: Color.fromARGB(255, 4, 21, 35),
                   fixedSize: Size(200, 50)),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) {
+                    return Weather_1();
+                  },
+                ));
+              },
               child: Text(
                 'Submit',
                 style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
