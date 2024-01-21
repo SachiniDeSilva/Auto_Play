@@ -1,3 +1,4 @@
+
 import 'package:auto_play/Pages/day_music_1.dart';
 
 import 'package:auto_play/Pages/day_music_2.dart';
@@ -8,7 +9,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
 class Time extends StatefulWidget {
-  const Time({super.key});
+  const Time({Key? key}) : super(key: key);
 
   @override
   State<Time> createState() => _TimeState();
@@ -18,13 +19,13 @@ class _TimeState extends State<Time> {
   late TextEditingController timeController;
   bool isSwitched = true;
 
-
   @override
   void initState() {
     super.initState();
     timeController = TextEditingController();
   }
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
@@ -70,7 +71,6 @@ class _TimeState extends State<Time> {
                           fontSize: 25,
                           fontWeight: FontWeight.bold),
                     ),
-
                     SizedBox(width: 10),
                     Container(
                       width: 100,
@@ -78,6 +78,7 @@ class _TimeState extends State<Time> {
                       child: Padding(
                         padding: const EdgeInsets.only(left: 5),
                         child: TextField(
+                          controller: timeController,
                           style: TextStyle(
                               color: Colors.black,
                               fontSize: 25,
@@ -88,17 +89,19 @@ class _TimeState extends State<Time> {
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(12)),
                           ),
-
-                  ),
-                  SizedBox(width: 10),
-                  Container(
-                    width: 120,
-                    child: Stack(
-                      children: [
-                        TextButton(
-                          onPressed: () {},
-                          child: Image.asset('assets/MOON.png'),
                         ),
+                      ),
+                    ),
+                    SizedBox(width: 10),
+                    Container(
+                      width: 120,
+                      child: Stack(
+                        children: [
+                          TextButton(
+                            onPressed: () {},
+                            child: Image.asset('assets/MOON.png'),
+                          ),
+                        ],
                       ),
                     ),
                     SizedBox(width: 10),
@@ -107,7 +110,7 @@ class _TimeState extends State<Time> {
                         width: 300,
                         child: Stack(
                           children: [
-                            new SwitchListTile(
+                            SwitchListTile(
                               activeColor: Colors.white,
                               activeTrackColor: Colors.yellow,
                               inactiveThumbColor: Colors.white,
@@ -116,19 +119,17 @@ class _TimeState extends State<Time> {
                                 setState(() {
                                   isSwitched = value;
                                   if (value == true) {
-                                    Navigator.of(context)
-                                        .push(MaterialPageRoute(
-                                      builder: (_) {
-                                        return Day_Music_1();
-                                      },
-                                    ));
+                                    Navigator.of(context).push(
+                                      MaterialPageRoute(
+                                        builder: (_) => DayMusic1(),
+                                      ),
+                                    );
                                   } else {
-                                    Navigator.of(context)
-                                        .push(MaterialPageRoute(
-                                      builder: (_) {
-                                        return Day_Music_2();
-                                      },
-                                    ));
+                                    Navigator.of(context).push(
+                                      MaterialPageRoute(
+                                        builder: (_) => Day_Music_2(),
+                                      ),
+                                    );
                                   }
                                 });
                               },
@@ -156,27 +157,8 @@ class _TimeState extends State<Time> {
                 ),
               ),
 
-             
-            SizedBox(
-              height: 100,
-            ),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10)),
-                  backgroundColor: Color.fromARGB(255, 4, 21, 35),
-                  fixedSize: Size(200, 50)),
-              onPressed: () {
-                String enteredTime = timeController.text;
-                Navigator.of(context).push(MaterialPageRoute(
-                  builder: (_) {
-                    return Day_Music_1();
-                  },
-                ));
-              },
-              child: Text(
-                'Submit',
-                style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+              SizedBox(
+                height: 100,
               ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
@@ -186,11 +168,11 @@ class _TimeState extends State<Time> {
                     fixedSize: Size(200, 50)),
                 onPressed: () {
                   String enteredTime = timeController.text;
-                  Navigator.of(context).push(MaterialPageRoute(
-                    builder: (_) {
-                      return Day_Music_1();
-                    },
-                  ));
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (_) => DayMusic1(),
+                    ),
+                  );
                 },
                 child: Text(
                   'Submit',
