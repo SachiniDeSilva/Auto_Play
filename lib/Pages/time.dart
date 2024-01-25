@@ -119,7 +119,7 @@ class _TimeState extends State<Time> {
                                     Navigator.of(context)
                                         .push(MaterialPageRoute(
                                       builder: (_) {
-                                        return Day_Music_1();
+                                        return DayMusic1();
                                       },
                                     ));
                                   } else {

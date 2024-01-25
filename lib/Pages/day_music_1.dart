@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
-
 class DayMusic1 extends StatefulWidget {
   const DayMusic1({Key? key}) : super(key: key);
 
@@ -23,17 +22,10 @@ class _DayMusic1State extends State<DayMusic1> {
   bool _isPlay8 = true;
   bool _isPlay9 = true;
   bool _isPlay10 = true;
-
-  Icon _playIcon = Icon(Icons.play_arrow);
-  Icon _pauseIcon = Icon(Icons.pause);
-
-  bool isSwitched = true;
-
   final Icon _playIcon = const Icon(Icons.play_arrow);
   final Icon _pauseIcon = Icon(Icons.pause);
 
   bool isSwitched = true;
-
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +36,6 @@ class _DayMusic1State extends State<DayMusic1> {
           padding: EdgeInsets.only(top: 60),
           child: Column(
             children: [
-
               Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Row(
@@ -60,9 +51,7 @@ class _DayMusic1State extends State<DayMusic1> {
                     ),
                   ],
                 ),
-
               ),
-
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -74,7 +63,6 @@ class _DayMusic1State extends State<DayMusic1> {
                     child: Image.asset('assets/Ellipse 14.png'),
                   ),
                 ],
-
               ),
               Padding(
                 padding: const EdgeInsets.only(right: 320),
@@ -89,58 +77,7 @@ class _DayMusic1State extends State<DayMusic1> {
                 ),
               ),
               Padding(
-
-                padding: const EdgeInsets.only(),
-
-                child: Padding(
-                  padding: const EdgeInsets.only(left: 40),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Text(
-                        'Time',
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 25,
-                            fontWeight: FontWeight.bold),
-                      ),
-                      SizedBox(width: 10),
-                      Container(
-                        width: 100,
-                        height: 50,
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 5),
-                          child: TextField(
-                            style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 25,
-                                fontWeight: FontWeight.bold),
-                            decoration: InputDecoration(
-                              filled: true,
-                              fillColor: Color.fromARGB(80, 158, 158, 158),
-                              border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(12)),
-                            ),
-                          ),
-                        ),
-                      ),
-                      SizedBox(width: 10),
-                      Expanded(
-                        child: Container(
-                          width: 300,
-                          child: Stack(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.only(left: 40),
-                                child: Image.asset('assets/MOON.png'),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-
+                padding: const EdgeInsets.only(left: 40),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
@@ -186,10 +123,11 @@ class _DayMusic1State extends State<DayMusic1> {
                       ),
                     ),
                   ],
-
                 ),
               ),
-            
+              SizedBox(
+                height: 50,
+              ),
               Container(
                 color: Color.fromARGB(126, 158, 158, 158),
                 child: ElevatedButton(
@@ -197,10 +135,7 @@ class _DayMusic1State extends State<DayMusic1> {
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(12)),
                       fixedSize: Size(150, 30)),
-
-                  onPressed: null,
                   onPressed: () {},
-
                   child: Text(
                     'Submit',
                     style: TextStyle(
@@ -212,18 +147,6 @@ class _DayMusic1State extends State<DayMusic1> {
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 200, top: 30),
-
-
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.grey,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10)),
-                    fixedSize: Size(200, 50)),
-                onPressed: null,
-                child: Text(
-                  'Submit',
-                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.grey,
@@ -239,7 +162,6 @@ class _DayMusic1State extends State<DayMusic1> {
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 200),
-
                 child: Text(
                   'Hello Good Night',
                   style: TextStyle(
@@ -275,7 +197,7 @@ class _DayMusic1State extends State<DayMusic1> {
                   ),
                 ),
               ),
-              
+              // ... rest of the ListTile widgets for the other music items ...
 
               SizedBox(
                 height: 5,
