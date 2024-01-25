@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
-
 class DayMusic1 extends StatefulWidget {
   const DayMusic1({Key? key}) : super(key: key);
 
