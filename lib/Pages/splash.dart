@@ -1,7 +1,9 @@
+
 import 'package:auto_play/Pages/login.dart';
+
 import 'package:flutter/material.dart';
 
-import 'home.dart';
+
 
 class Splash extends StatefulWidget {
   const Splash({Key? key}) : super(key: key);
@@ -16,7 +18,7 @@ class _SplashState extends State<Splash> {
     super.initState();
     Future.delayed(const Duration(seconds: 3), () {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => const Home()));
+          context, MaterialPageRoute(builder: (context) => const LogIn()));
     });
   }
 
