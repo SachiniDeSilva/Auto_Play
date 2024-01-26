@@ -1,4 +1,5 @@
 import 'package:auto_play/Pages/mydrawer.dart';
+import 'package:auto_play/Pages/view_profile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
@@ -142,7 +143,11 @@ class _TermUseState extends State<TermUse> {
           children: [
             IconButton(
               onPressed: () {
-                Navigator.pop(context, Home());
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Home(),
+                    ));
               },
               icon: Icon(Icons.home),
               iconSize: 40,
@@ -155,8 +160,14 @@ class _TermUseState extends State<TermUse> {
               color: Colors.black,
             ),
             IconButton(
-              onPressed: () {},
-              icon: Icon(Icons.restart_alt),
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ViewProfile(),
+                    ));
+              },
+              icon: Icon(Icons.account_circle),
               iconSize: 40,
               color: Colors.black,
             ),

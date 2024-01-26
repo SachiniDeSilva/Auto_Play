@@ -1,5 +1,7 @@
+import 'package:auto_play/Pages/favorite.dart';
 import 'package:auto_play/Pages/home.dart';
 import 'package:auto_play/Pages/time.dart';
+import 'package:auto_play/Pages/view_profile.dart';
 import 'package:auto_play/Pages/weather.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -24,20 +26,38 @@ class _GetStartState extends State<GetStart> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Home(),
+                      ));
+                },
                 icon: Icon(Icons.home),
                 iconSize: 40,
                 color: Colors.black,
               ),
               IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Favorite(),
+                      ));
+                },
                 icon: Icon(Icons.favorite),
                 iconSize: 40,
                 color: Colors.black,
               ),
               IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.restart_alt),
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ViewProfile(),
+                      ));
+                },
+                icon: Icon(Icons.account_circle),
                 iconSize: 40,
                 color: Colors.black,
               ),
