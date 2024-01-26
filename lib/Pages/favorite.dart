@@ -18,27 +18,27 @@ class _FavoriteState extends State<Favorite> {
     return SafeArea(
       child: Scaffold(
         bottomNavigationBar: BottomAppBar(
-          color: Color.fromARGB(255, 205, 203, 203),
+          color: const Color.fromARGB(255, 205, 203, 203),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               IconButton(
                 onPressed: () {
-                  Navigator.pop(context, Home());
+                  Navigator.pop(context, const Home());
                 },
-                icon: Icon(Icons.home),
+                icon: const Icon(Icons.home),
                 iconSize: 40,
                 color: Colors.black,
               ),
               IconButton(
                 onPressed: () {},
-                icon: Icon(Icons.favorite),
+                icon: const Icon(Icons.favorite),
                 iconSize: 40,
                 color: Colors.black,
               ),
               IconButton(
                 onPressed: () {},
-                icon: Icon(Icons.restart_alt),
+                icon: const Icon(Icons.restart_alt),
                 iconSize: 40,
                 color: Colors.black,
               ),
@@ -48,7 +48,7 @@ class _FavoriteState extends State<Favorite> {
         body: Stack(
           children: [
             Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 gradient: LinearGradient(
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
@@ -69,9 +69,9 @@ class _FavoriteState extends State<Favorite> {
                               padding: const EdgeInsets.only(top: 40),
                               child: IconButton(
                                 onPressed: () {
-                                  Navigator.pop(context, MyDrawer());
+                                  Navigator.pop(context, const MyDrawer());
                                 },
-                                icon: Icon(Icons.arrow_back),
+                                icon: const Icon(Icons.arrow_back),
                                 color: Colors.black,
                               ),
                             ),
@@ -82,7 +82,7 @@ class _FavoriteState extends State<Favorite> {
                                   const EdgeInsets.only(left: 200, top: 40),
                               child: IconButton(
                                 onPressed: () {},
-                                icon: Icon(Icons.search),
+                                icon: const Icon(Icons.search),
                                 color: Colors.black,
                               ),
                             ),
@@ -99,9 +99,9 @@ class _FavoriteState extends State<Favorite> {
                       Container(
                         child: Column(
                           children: [
-                            Padding(
+                            const Padding(
                               padding:
-                                  const EdgeInsets.only(right: 285, top: 30),
+                                  EdgeInsets.only(right: 285, top: 30),
                               child: Text(
                                 'Favorite',
                                 textAlign: TextAlign.start,
@@ -116,11 +116,11 @@ class _FavoriteState extends State<Favorite> {
                               padding: const EdgeInsets.only(top: 30),
                               child: Container(
                                 decoration: BoxDecoration(
-                                  color: Color.fromARGB(117, 158, 158, 158),
+                                  color: const Color.fromARGB(117, 158, 158, 158),
                                   borderRadius: BorderRadius.circular(12),
                                 ),
                                 child: ListTile(
-                                  title: Text(
+                                  title: const Text(
                                     'Melody',
                                     style: TextStyle(
                                         color: Colors.black,
@@ -130,11 +130,11 @@ class _FavoriteState extends State<Favorite> {
                                   trailing: Row(
                                     mainAxisSize: MainAxisSize.min,
                                     children: [
-                                      Icon(
+                                      const Icon(
                                         Icons.favorite,
                                         color: Colors.black,
                                       ),
-                                      SizedBox(
+                                      const SizedBox(
                                         width: 32,
                                       ),
                                       Image.asset('assets/􀟲.png'),
@@ -143,11 +143,11 @@ class _FavoriteState extends State<Favorite> {
                                 ),
                               ),
                             ),
-                            SizedBox(height: 10),
+                            const SizedBox(height: 10),
                             Container(
-                              color: Color.fromARGB(117, 158, 158, 158),
+                              color: const Color.fromARGB(117, 158, 158, 158),
                               child: ListTile(
-                                title: Text(
+                                title: const Text(
                                   'Melody',
                                   style: TextStyle(
                                       color: Colors.black,
@@ -157,11 +157,11 @@ class _FavoriteState extends State<Favorite> {
                                 trailing: Row(
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
-                                    Icon(
+                                    const Icon(
                                       Icons.favorite,
                                       color: Colors.black,
                                     ),
-                                    SizedBox(
+                                    const SizedBox(
                                       width: 32,
                                     ),
                                     Image.asset('assets/􀟲.png'),
@@ -169,11 +169,11 @@ class _FavoriteState extends State<Favorite> {
                                 ),
                               ),
                             ),
-                            SizedBox(height: 10),
+                            const SizedBox(height: 10),
                             Container(
-                              color: Color.fromARGB(117, 158, 158, 158),
+                              color: const Color.fromARGB(117, 158, 158, 158),
                               child: ListTile(
-                                title: Text(
+                                title: const Text(
                                   'Melody',
                                   style: TextStyle(
                                       color: Colors.black,
@@ -183,11 +183,11 @@ class _FavoriteState extends State<Favorite> {
                                 trailing: Row(
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
-                                    Icon(
+                                    const Icon(
                                       Icons.favorite,
                                       color: Colors.black,
                                     ),
-                                    SizedBox(
+                                    const SizedBox(
                                       width: 32,
                                     ),
                                     Image.asset('assets/􀟲.png'),
@@ -195,11 +195,11 @@ class _FavoriteState extends State<Favorite> {
                                 ),
                               ),
                             ),
-                            SizedBox(height: 10),
+                            const SizedBox(height: 10),
                             Container(
-                              color: Color.fromARGB(117, 158, 158, 158),
+                              color: const Color.fromARGB(117, 158, 158, 158),
                               child: ListTile(
-                                title: Text(
+                                title: const Text(
                                   'Melody',
                                   style: TextStyle(
                                       color: Colors.black,
@@ -209,11 +209,11 @@ class _FavoriteState extends State<Favorite> {
                                 trailing: Row(
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
-                                    Icon(
+                                    const Icon(
                                       Icons.favorite,
                                       color: Colors.black,
                                     ),
-                                    SizedBox(
+                                    const SizedBox(
                                       width: 32,
                                     ),
                                     Image.asset('assets/􀟲.png'),
@@ -221,11 +221,11 @@ class _FavoriteState extends State<Favorite> {
                                 ),
                               ),
                             ),
-                            SizedBox(height: 10),
+                            const SizedBox(height: 10),
                             Container(
-                              color: Color.fromARGB(117, 158, 158, 158),
+                              color: const Color.fromARGB(117, 158, 158, 158),
                               child: ListTile(
-                                title: Text(
+                                title: const Text(
                                   'Melody',
                                   style: TextStyle(
                                       color: Colors.black,
@@ -235,11 +235,11 @@ class _FavoriteState extends State<Favorite> {
                                 trailing: Row(
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
-                                    Icon(
+                                    const Icon(
                                       Icons.favorite,
                                       color: Colors.black,
                                     ),
-                                    SizedBox(
+                                    const SizedBox(
                                       width: 32,
                                     ),
                                     Image.asset('assets/􀟲.png'),
@@ -247,11 +247,11 @@ class _FavoriteState extends State<Favorite> {
                                 ),
                               ),
                             ),
-                            SizedBox(height: 10),
+                            const SizedBox(height: 10),
                             Container(
-                              color: Color.fromARGB(117, 158, 158, 158),
+                              color: const Color.fromARGB(117, 158, 158, 158),
                               child: ListTile(
-                                title: Text(
+                                title: const Text(
                                   'Melody',
                                   style: TextStyle(
                                       color: Colors.black,
@@ -261,11 +261,11 @@ class _FavoriteState extends State<Favorite> {
                                 trailing: Row(
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
-                                    Icon(
+                                    const Icon(
                                       Icons.favorite,
                                       color: Colors.black,
                                     ),
-                                    SizedBox(
+                                    const SizedBox(
                                       width: 32,
                                     ),
                                     Image.asset('assets/􀟲.png'),
@@ -273,11 +273,11 @@ class _FavoriteState extends State<Favorite> {
                                 ),
                               ),
                             ),
-                            SizedBox(height: 10),
+                            const SizedBox(height: 10),
                             Container(
-                              color: Color.fromARGB(117, 158, 158, 158),
+                              color: const Color.fromARGB(117, 158, 158, 158),
                               child: ListTile(
-                                title: Text(
+                                title: const Text(
                                   'Melody',
                                   style: TextStyle(
                                       color: Colors.black,
@@ -287,11 +287,11 @@ class _FavoriteState extends State<Favorite> {
                                 trailing: Row(
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
-                                    Icon(
+                                    const Icon(
                                       Icons.favorite,
                                       color: Colors.black,
                                     ),
-                                    SizedBox(
+                                    const SizedBox(
                                       width: 32,
                                     ),
                                     Image.asset('assets/􀟲.png'),
@@ -299,11 +299,11 @@ class _FavoriteState extends State<Favorite> {
                                 ),
                               ),
                             ),
-                            SizedBox(height: 10),
+                            const SizedBox(height: 10),
                             Container(
-                              color: Color.fromARGB(117, 158, 158, 158),
+                              color: const Color.fromARGB(117, 158, 158, 158),
                               child: ListTile(
-                                title: Text(
+                                title: const Text(
                                   'Melody',
                                   style: TextStyle(
                                       color: Colors.black,
@@ -313,11 +313,11 @@ class _FavoriteState extends State<Favorite> {
                                 trailing: Row(
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
-                                    Icon(
+                                    const Icon(
                                       Icons.favorite,
                                       color: Colors.black,
                                     ),
-                                    SizedBox(
+                                    const SizedBox(
                                       width: 32,
                                     ),
                                     Image.asset('assets/􀟲.png'),
@@ -325,11 +325,11 @@ class _FavoriteState extends State<Favorite> {
                                 ),
                               ),
                             ),
-                            SizedBox(height: 10),
+                            const SizedBox(height: 10),
                             Container(
-                              color: Color.fromARGB(117, 158, 158, 158),
+                              color: const Color.fromARGB(117, 158, 158, 158),
                               child: ListTile(
-                                title: Text(
+                                title: const Text(
                                   'Melody',
                                   style: TextStyle(
                                       color: Colors.black,
@@ -339,11 +339,11 @@ class _FavoriteState extends State<Favorite> {
                                 trailing: Row(
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
-                                    Icon(
+                                    const Icon(
                                       Icons.favorite,
                                       color: Colors.black,
                                     ),
-                                    SizedBox(
+                                    const SizedBox(
                                       width: 32,
                                     ),
                                     Image.asset('assets/􀟲.png'),
@@ -351,11 +351,11 @@ class _FavoriteState extends State<Favorite> {
                                 ),
                               ),
                             ),
-                            SizedBox(height: 10),
+                            const SizedBox(height: 10),
                             Container(
-                              color: Color.fromARGB(117, 158, 158, 158),
+                              color: const Color.fromARGB(117, 158, 158, 158),
                               child: ListTile(
-                                title: Text(
+                                title: const Text(
                                   'Melody',
                                   style: TextStyle(
                                       color: Colors.black,
@@ -365,11 +365,11 @@ class _FavoriteState extends State<Favorite> {
                                 trailing: Row(
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
-                                    Icon(
+                                    const Icon(
                                       Icons.favorite,
                                       color: Colors.black,
                                     ),
-                                    SizedBox(
+                                    const SizedBox(
                                       width: 32,
                                     ),
                                     Image.asset('assets/􀟲.png'),
@@ -377,11 +377,11 @@ class _FavoriteState extends State<Favorite> {
                                 ),
                               ),
                             ),
-                            SizedBox(height: 10),
+                            const SizedBox(height: 10),
                             Container(
-                              color: Color.fromARGB(117, 158, 158, 158),
+                              color: const Color.fromARGB(117, 158, 158, 158),
                               child: ListTile(
-                                title: Text(
+                                title: const Text(
                                   'Melody',
                                   style: TextStyle(
                                       color: Colors.black,
@@ -391,11 +391,11 @@ class _FavoriteState extends State<Favorite> {
                                 trailing: Row(
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
-                                    Icon(
+                                    const Icon(
                                       Icons.favorite,
                                       color: Colors.black,
                                     ),
-                                    SizedBox(
+                                    const SizedBox(
                                       width: 32,
                                     ),
                                     Image.asset('assets/􀟲.png'),
@@ -420,7 +420,7 @@ class _FavoriteState extends State<Favorite> {
                     borderRadius: BorderRadius.circular(30.0)),
                 child: FloatingActionButton(
                   onPressed: () {},
-                  child: Icon(Icons.add),
+                  child: const Icon(Icons.add),
                   backgroundColor: Colors.white,
                 ),
               ),
