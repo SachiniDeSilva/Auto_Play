@@ -23,7 +23,7 @@ class _DayMusic1State extends State<DayMusic1> {
   bool _isPlay9 = true;
   bool _isPlay10 = true;
   final Icon _playIcon = const Icon(Icons.play_arrow);
-  final Icon _pauseIcon = Icon(Icons.pause);
+  final Icon _pauseIcon = const Icon(Icons.pause);
 
   bool isSwitched = true;
 
@@ -33,7 +33,7 @@ class _DayMusic1State extends State<DayMusic1> {
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.only(top: 60),
+          padding: const EdgeInsets.only(top: 60),
           child: Column(
             children: [
               Padding(
@@ -68,9 +68,9 @@ class _DayMusic1State extends State<DayMusic1> {
                 padding: const EdgeInsets.only(right: 320),
                 child: IconButton(
                   onPressed: () {
-                    Navigator.pop(context, Time());
+                    Navigator.pop(context, const Time());
                   },
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.arrow_back,
                     color: Colors.black,
                   ),
@@ -81,34 +81,34 @@ class _DayMusic1State extends State<DayMusic1> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    Text(
+                    const Text(
                       'Time',
                       style: TextStyle(
                           color: Colors.black,
                           fontSize: 25,
                           fontWeight: FontWeight.bold),
                     ),
-                    SizedBox(width: 10),
+                    const SizedBox(width: 10),
                     Container(
                       width: 100,
                       height: 50,
                       child: Padding(
                         padding: const EdgeInsets.only(left: 5),
                         child: TextField(
-                          style: TextStyle(
+                          style: const TextStyle(
                               color: Colors.black,
                               fontSize: 25,
                               fontWeight: FontWeight.bold),
                           decoration: InputDecoration(
                             filled: true,
-                            fillColor: Color.fromARGB(80, 158, 158, 158),
+                            fillColor: const Color.fromARGB(80, 158, 158, 158),
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(12)),
                           ),
                         ),
                       ),
                     ),
-                    SizedBox(width: 10),
+                    const SizedBox(width: 10),
                     Expanded(
                       child: Container(
                         width: 300,
@@ -125,18 +125,18 @@ class _DayMusic1State extends State<DayMusic1> {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
               Container(
-                color: Color.fromARGB(126, 158, 158, 158),
+                color: const Color.fromARGB(126, 158, 158, 158),
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(12)),
-                      fixedSize: Size(150, 30)),
+                      fixedSize: const Size(150, 30)),
                   onPressed: () {},
-                  child: Text(
+                  child: const Text(
                     'Submit',
                     style: TextStyle(
                         fontSize: 25,
@@ -152,16 +152,16 @@ class _DayMusic1State extends State<DayMusic1> {
                       backgroundColor: Colors.grey,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10)),
-                      fixedSize: Size(200, 50)),
+                      fixedSize: const Size(200, 50)),
                   onPressed: () {},
-                  child: Text(
+                  child: const Text(
                     'Submit',
                     style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 200),
+              const Padding(
+                padding: EdgeInsets.only(left: 200),
                 child: Text(
                   'Hello Good Night',
                   style: TextStyle(
@@ -175,10 +175,10 @@ class _DayMusic1State extends State<DayMusic1> {
                 child: Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(12),
-                    color: Color.fromARGB(117, 158, 158, 158),
+                    color: const Color.fromARGB(117, 158, 158, 158),
                   ),
                   child: ListTile(
-                    title: Text(
+                    title: const Text(
                       'Satie – Gymnopédie No.1',
                       style: TextStyle(
                           color: Colors.black,
@@ -199,7 +199,7 @@ class _DayMusic1State extends State<DayMusic1> {
               ),
               // ... rest of the ListTile widgets for the other music items ...
 
-              SizedBox(
+              const SizedBox(
                 height: 5,
               ),
             ],
@@ -207,25 +207,29 @@ class _DayMusic1State extends State<DayMusic1> {
         ),
       ),
       bottomNavigationBar: BottomAppBar(
-        color: Color.fromARGB(165, 78, 77, 77),
+        color: const Color.fromARGB(165, 78, 77, 77),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             IconButton(
               onPressed: () {},
-              icon: Icon(Icons.home),
+              icon: const Icon(Icons.home),
               iconSize: 40,
               color: Colors.black,
             ),
             IconButton(
               onPressed: () {},
-              icon: Icon(Icons.favorite),
+              icon: const Icon(Icons.favorite),
               iconSize: 40,
               color: Colors.black,
             ),
             IconButton(
               onPressed: () {},
+
               icon: Icon(Icons.account_circle),
+
+              icon: const Icon(Icons.restart_alt),
+
               iconSize: 40,
               color: Colors.black,
             ),

@@ -1,3 +1,5 @@
+import 'package:auto_play/Pages/register.dart';
+import 'package:auto_play/Pages/signup.dart';
 import 'package:flutter/material.dart';
 
 class LogIn extends StatefulWidget {
@@ -15,11 +17,11 @@ class _LogInState extends State<LogIn> {
         body: Stack(
           children: [
             Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 gradient: LinearGradient(
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
-                  colors: [Colors.white, Colors.blue],
+                  colors: [Color.fromARGB(255, 149, 197, 208), Colors.blue],
                 ),
               ),
             ),
@@ -32,11 +34,11 @@ class _LogInState extends State<LogIn> {
                     height: 130,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 60,
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 50),
+                const Padding(
+                  padding: EdgeInsets.only(left: 50),
                   child: Row(
                     children: [
                       Text(
@@ -47,7 +49,7 @@ class _LogInState extends State<LogIn> {
                             fontSize: 20),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 8),
+                        padding: EdgeInsets.only(left: 8),
                         child: Text(
                           'Rhythem',
                           style: TextStyle(
@@ -60,11 +62,11 @@ class _LogInState extends State<LogIn> {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 130),
+                const Padding(
+                  padding: EdgeInsets.only(left: 130),
                   child: Row(
                     children: [
                       Text(
@@ -75,7 +77,7 @@ class _LogInState extends State<LogIn> {
                             fontSize: 20),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 8),
+                        padding: EdgeInsets.only(left: 8),
                         child: Text(
                           'With Nature',
                           style: TextStyle(
@@ -88,10 +90,10 @@ class _LogInState extends State<LogIn> {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 75,
                 ),
-                Text(
+                const Text(
                   'AutoBeats is High quality solution for',
                   style: TextStyle(
                       fontSize: 16,
@@ -114,11 +116,12 @@ class _LogInState extends State<LogIn> {
                             style: ElevatedButton.styleFrom(
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(10)),
-                                backgroundColor: Color.fromARGB(255, 4, 21, 35),
-                                fixedSize: Size(150, 50)),
-                            onPressed: () {},
-                            child: Text(
-                              'Login',
+                                backgroundColor: const Color.fromARGB(255, 4, 21, 35),
+                                fixedSize: const Size(150, 50)),
+                            onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context)=> const SignupPage()));
+                            },
+                            child: const Text(
+                              'SignUp',
                               style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,
@@ -130,9 +133,11 @@ class _LogInState extends State<LogIn> {
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(10)),
                                 backgroundColor: Colors.white,
-                                fixedSize: Size(150, 50)),
-                            onPressed: () {},
-                            child: Text(
+                                fixedSize: const Size(150, 50)),
+                            onPressed: () {
+                              Navigator.push(context, MaterialPageRoute(builder: (context)=> const Register()));
+                            },
+                            child: const Text(
                               'Register',
                               style: TextStyle(
                                   color: Colors.grey,
