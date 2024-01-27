@@ -1,5 +1,6 @@
 import 'package:auto_play/Pages/register.dart';
-import 'package:auto_play/Pages/signup.dart';
+import 'package:auto_play/Pages/signin.dart';
+
 import 'package:flutter/material.dart';
 
 class LogIn extends StatefulWidget {
@@ -100,61 +101,61 @@ class _LogInState extends State<LogIn> {
                       fontWeight: FontWeight.bold,
                       color: Colors.black),
                 ),
-                Expanded(
-                  child: Center(
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      width: 320,
-                      height: 60,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(10)),
-                                backgroundColor: const Color.fromARGB(255, 4, 21, 35),
-                                fixedSize: const Size(150, 50)),
-                            onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context)=> const SignupPage()));
-                            },
-                            child: const Text(
-                              'SignUp',
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 20),
-                            ),
-                          ),
-                          ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(10)),
-                                backgroundColor: Colors.white,
-                                fixedSize: const Size(150, 50)),
-                            onPressed: () {
-                              Navigator.push(context, MaterialPageRoute(builder: (context)=> const Register()));
-                            },
-                            child: const Text(
-                              'Register',
-                              style: TextStyle(
-                                  color: Colors.grey,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 20),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
+               SizedBox(height: 100,),
+                      Column(
+          children: <Widget>[
+            MaterialButton(
+              minWidth: double.infinity,
+              height: 60,
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> const SigninPage()));
+              },
+              color: Colors.white,
+              shape: RoundedRectangleBorder(
+                side: BorderSide(
+                  color: Colors.white,
                 ),
-              ],
+                borderRadius: BorderRadius.circular(50)
+              ),
+              child: Text("Sign In", style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 18,
+                color: Colors.black,
+              ),),
             ),
+            SizedBox(height: 20,),
+             MaterialButton(
+              minWidth: double.infinity,
+              height: 60,
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> const Register()));
+              },
+              color:  Color.fromARGB(255, 4, 21, 35),
+
+              shape: RoundedRectangleBorder(
+                side: BorderSide(
+                  color:  Color.fromARGB(255, 4, 21, 35),
+                ),
+                borderRadius: BorderRadius.circular(50)
+              ),
+              child: Text("Signup", style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+                fontSize: 18,
+              ),),
+            ),
+
+
           ],
         ),
-      ),
+              ]
+            )
+                
+              
+          ],
+    ),
+    ),
     );
+          
   }
 }
