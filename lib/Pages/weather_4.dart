@@ -389,7 +389,7 @@ class _Weather_4State extends State<Weather_4> {
             ),
             IconButton(
               onPressed: () {},
-              icon: Icon(Icons.restart_alt),
+              icon: Icon(Icons.account_circle),
               iconSize: 40,
               color: Colors.black,
             ),

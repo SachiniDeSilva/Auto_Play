@@ -1,4 +1,5 @@
 import 'package:auto_play/Pages/edit_profile.dart';
+import 'package:auto_play/Pages/favorite.dart';
 import 'package:auto_play/Pages/forget_pw_1.dart';
 import 'package:auto_play/Pages/forget_pw_2.dart';
 import 'package:auto_play/Pages/home.dart';
@@ -216,23 +217,39 @@ class _ViewProfileState extends State<ViewProfile> {
           children: [
             IconButton(
               onPressed: () {
-                Navigator.pop(context, Home());
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (_) {
+                    return Home();
+                  },
+                ));
               },
               icon: Icon(Icons.home),
               iconSize: 40,
               color: Colors.black,
             ),
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (_) {
+                    return Favorite();
+                  },
+                ));
+              },
               icon: Icon(Icons.favorite),
               iconSize: 40,
               color: Colors.black,
             ),
-            IconButton(
-              onPressed: () {},
-              icon: Icon(Icons.restart_alt),
-              iconSize: 40,
-              color: Colors.black,
+            Container(
+              decoration: BoxDecoration(
+                color: const Color.fromARGB(255, 2, 27, 48),
+                borderRadius: BorderRadius.circular(32),
+              ),
+              child: IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.account_circle),
+                iconSize: 40,
+                color: Colors.white,
+              ),
             ),
           ],
         ),

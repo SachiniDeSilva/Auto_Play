@@ -1,8 +1,12 @@
+import 'package:auto_play/Pages/favorite.dart';
 import 'package:auto_play/Pages/get_start.dart';
+import 'package:auto_play/Pages/view_profile.dart';
 import 'package:auto_play/Pages/weather_1.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+
+import 'home.dart';
 
 class Weather extends StatefulWidget {
   const Weather({super.key});
@@ -88,20 +92,38 @@ class _WeatherState extends State<Weather> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Home(),
+                    ));
+              },
               icon: Icon(Icons.home),
               iconSize: 40,
               color: Colors.black,
             ),
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Favorite(),
+                    ));
+              },
               icon: Icon(Icons.favorite),
               iconSize: 40,
               color: Colors.black,
             ),
             IconButton(
-              onPressed: () {},
-              icon: Icon(Icons.restart_alt),
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ViewProfile(),
+                    ));
+              },
+              icon: Icon(Icons.account_circle),
               iconSize: 40,
               color: Colors.black,
             ),

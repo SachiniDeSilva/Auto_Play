@@ -190,7 +190,7 @@ class _EditProfileState extends State<EditProfile> {
             ),
             IconButton(
               onPressed: () {},
-              icon: const Icon(Icons.restart_alt),
+              icon: const Icon(Icons.account_circle),
               iconSize: 40,
               color: Colors.black,
             ),

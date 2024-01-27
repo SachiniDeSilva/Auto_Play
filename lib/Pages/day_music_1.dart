@@ -1,8 +1,6 @@
 import 'package:auto_play/Pages/get_start.dart';
 import 'package:auto_play/Pages/time.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 class DayMusic1 extends StatefulWidget {
   const DayMusic1({Key? key}) : super(key: key);
@@ -225,7 +223,10 @@ class _DayMusic1State extends State<DayMusic1> {
             ),
             IconButton(
               onPressed: () {},
-              icon: const Icon(Icons.restart_alt),
+
+              icon: Icon(Icons.account_circle),
+
+
               iconSize: 40,
               color: Colors.black,
             ),

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "824287007564",
+    "project_id": "autoplay-f22b5",
+    "storage_bucket": "autoplay-f22b5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:824287007564:android:f5d116080dfd600a1075e9",
+        "android_client_info": {
+          "package_name": "com.example.auto_play_project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYPnHUaLuQ7cuwbKOMF9j-QBbDRDnveZE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

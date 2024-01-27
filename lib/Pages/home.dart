@@ -1,5 +1,6 @@
 import 'package:auto_play/Pages/favorite.dart';
 import 'package:auto_play/Pages/get_start.dart';
+import 'package:auto_play/Pages/view_profile.dart';
 import 'package:flutter/material.dart';
 import 'package:auto_play/Pages/mydrawer.dart';
 
@@ -46,8 +47,14 @@ class Home extends StatelessWidget {
             IconButton(
               color: Colors.black,
               iconSize: 40.0,
-              onPressed: () {},
-              icon: const Icon(Icons.restart_alt),
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (_) {
+                    return ViewProfile();
+                  },
+                ));
+              },
+              icon: const Icon(Icons.account_circle),
             ),
           ],
         ),
