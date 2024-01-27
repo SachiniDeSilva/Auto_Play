@@ -1,3 +1,4 @@
+import 'package:auto_play/Pages/register.dart';
 import 'package:flutter/material.dart';
 
 class ForgetPw2 extends StatefulWidget {
@@ -186,7 +187,9 @@ class _ForgetPw2State extends State<ForgetPw2> {
                               borderRadius: BorderRadius.circular(30)),
                           backgroundColor: Color.fromARGB(255, 4, 21, 35),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=> const Register()));
+                        },
                         child: Text(
                           'SIGNUP',
                           style: TextStyle(

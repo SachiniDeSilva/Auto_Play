@@ -265,6 +265,43 @@ Widget buildLoginBtn() {
                 buildforgottenpw(),
                 buildRemember(),
                 buildLoginBtn(),
+                 Padding(
+                      padding: const EdgeInsets.only(top: 32),
+                      child: Text(
+                        'or',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            fontStyle: FontStyle.italic),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 24),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          IconButton(
+                            onPressed: () {},
+                            icon: Icon(Icons.facebook),
+                            iconSize: 30,
+                            color: Colors.black,
+                          ),
+                          IconButton(
+                            onPressed: () {},
+                            icon: Image.asset(
+                              'assets/flat-color-icons_google.png',
+                            ),
+                          ),
+                          IconButton(
+                            onPressed: () {},
+                            icon: Icon(Icons.apple),
+                            iconSize: 30,
+                            color: Colors.black,
+                          ),
+                        ],
+                      ),
+                    ),
                 buildSignupBtn(),
               ],
             ),
