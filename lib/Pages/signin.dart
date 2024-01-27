@@ -224,7 +224,7 @@ Widget buildLoginBtn() {
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
                 colors: [
-                  Color.fromARGB(255, 149, 197, 208),
+                  Colors.white,
                   Colors.blue,
                 ],
               ),
@@ -251,8 +251,8 @@ Widget buildLoginBtn() {
                 Text(
                   "Sign In",
                   style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 40,
+                    color: Colors.black,
+                    fontSize: 30,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
