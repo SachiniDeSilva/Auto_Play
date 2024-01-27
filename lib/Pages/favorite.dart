@@ -1,13 +1,12 @@
 import 'package:auto_play/Pages/home.dart';
 import 'package:auto_play/Pages/mydrawer.dart';
-import 'package:auto_play/Pages/view_profile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter/src/rendering/box.dart';
 
 class Favorite extends StatefulWidget {
-  const Favorite({Key? key}) :super(key:key);
+  const Favorite({super.key});
 
   @override
   State<Favorite> createState() => _FavoriteState();
@@ -25,44 +24,12 @@ class _FavoriteState extends State<Favorite> {
             children: [
               IconButton(
                 onPressed: () {
-
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => Home(),
-                      ));
-
                   Navigator.pop(context, const Home());
-
                 },
                 icon: const Icon(Icons.home),
                 iconSize: 40,
                 color: Colors.black,
               ),
-
-              Container(
-                decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 2, 27, 48),
-                  borderRadius: BorderRadius.circular(32),
-                ),
-                child: IconButton(
-                  onPressed: () {},
-                  icon: Icon(Icons.favorite),
-                  iconSize: 40,
-                  color: Colors.white,
-                ),
-              ),
-              IconButton(
-                onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                    builder: (_) {
-                      return ViewProfile();
-                    },
-                  ));
-                },
-                icon: Icon(Icons.account_circle),
-              ),
-
               IconButton(
                 onPressed: () {},
                 icon: const Icon(Icons.favorite),
@@ -72,7 +39,6 @@ class _FavoriteState extends State<Favorite> {
               IconButton(
                 onPressed: () {},
                 icon: const Icon(Icons.restart_alt),
-
                 iconSize: 40,
                 color: Colors.black,
               ),
@@ -461,14 +427,7 @@ class _FavoriteState extends State<Favorite> {
             ),
           ],
         ),
-      
-       
-            
-          ),
-          );
-        
-    
-     
-    
+      ),
+    );
   }
 }

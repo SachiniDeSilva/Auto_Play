@@ -1,5 +1,6 @@
 import 'package:auto_play/Pages/register.dart';
-import 'package:auto_play/Pages/signup.dart';
+import 'package:auto_play/Pages/signin.dart';
+
 import 'package:flutter/material.dart';
 
 class LogIn extends StatefulWidget {
@@ -100,26 +101,26 @@ class _LogInState extends State<LogIn> {
                       fontWeight: FontWeight.bold,
                       color: Colors.black),
                 ),
-                SizedBox(height: 70,),
-                 Column(
+               SizedBox(height: 100,),
+                      Column(
           children: <Widget>[
             MaterialButton(
               minWidth: double.infinity,
               height: 60,
               onPressed: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context)=> const SignupPage()));
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> const SigninPage()));
               },
               color: Colors.white,
               shape: RoundedRectangleBorder(
                 side: BorderSide(
-                  color: Colors.grey,
+                  color: Colors.white,
                 ),
                 borderRadius: BorderRadius.circular(50)
               ),
-              child: Text("Login", style: TextStyle(
-                color: Colors.black,
+              child: Text("Sign In", style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 18,
+                color: Colors.black,
               ),),
             ),
             SizedBox(height: 20,),
@@ -129,11 +130,11 @@ class _LogInState extends State<LogIn> {
               onPressed: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context)=> const Register()));
               },
-              color:  Color.fromARGB(255, 13, 4, 35),
+              color:  Color.fromARGB(255, 4, 21, 35),
 
               shape: RoundedRectangleBorder(
                 side: BorderSide(
-                  color:  const Color.fromARGB(255, 4, 21, 35),
+                  color:  Color.fromARGB(255, 4, 21, 35),
                 ),
                 borderRadius: BorderRadius.circular(50)
               ),
@@ -147,13 +148,14 @@ class _LogInState extends State<LogIn> {
 
           ],
         ),
-        
-
-              ],
-            ),
+              ]
+            )
+                
+              
           ],
-        ),
-      ),
+    ),
+    ),
     );
+          
   }
 }
