@@ -235,7 +235,7 @@ Widget buildLoginBtn() {
             physics: AlwaysScrollableScrollPhysics(),
             padding: EdgeInsets.symmetric(
               horizontal: 25,
-              vertical: 50,
+              vertical: 20,
             ),
             
             child: Column(
@@ -257,7 +257,7 @@ Widget buildLoginBtn() {
                   ),
                 ),
                 SizedBox(
-                  height: 50,
+                  height: 20,
                 ),
                 buildEmail(),
                 SizedBox(height: 20,),
@@ -266,7 +266,7 @@ Widget buildLoginBtn() {
                 buildRemember(),
                 buildLoginBtn(),
                  Padding(
-                      padding: const EdgeInsets.only(top: 32),
+                      padding: const EdgeInsets.only(top: 15),
                       child: Text(
                         'or',
                         style: TextStyle(
@@ -277,7 +277,7 @@ Widget buildLoginBtn() {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(top: 24),
+                      padding: const EdgeInsets.only(top: 15),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
