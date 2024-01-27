@@ -16,8 +16,69 @@ class Favorite extends StatefulWidget {
 class _FavoriteState extends State<Favorite> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Stack(
+    return SafeArea(
+      child: Scaffold(
+        bottomNavigationBar: BottomAppBar(
+          color: const Color.fromARGB(255, 205, 203, 203),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              IconButton(
+                onPressed: () {
+
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Home(),
+                      ));
+
+                  Navigator.pop(context, const Home());
+
+                },
+                icon: const Icon(Icons.home),
+                iconSize: 40,
+                color: Colors.black,
+              ),
+
+              Container(
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 2, 27, 48),
+                  borderRadius: BorderRadius.circular(32),
+                ),
+                child: IconButton(
+                  onPressed: () {},
+                  icon: Icon(Icons.favorite),
+                  iconSize: 40,
+                  color: Colors.white,
+                ),
+              ),
+              IconButton(
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (_) {
+                      return ViewProfile();
+                    },
+                  ));
+                },
+                icon: Icon(Icons.account_circle),
+
+              IconButton(
+                onPressed: () {},
+                icon: const Icon(Icons.favorite),
+                iconSize: 40,
+                color: Colors.black,
+              ),
+              IconButton(
+                onPressed: () {},
+                icon: const Icon(Icons.restart_alt),
+
+                iconSize: 40,
+                color: Colors.black,
+              ),
+            ],
+          ),
+        ),
+        body: Stack(
           children: [
             Container(
               decoration: const BoxDecoration(
