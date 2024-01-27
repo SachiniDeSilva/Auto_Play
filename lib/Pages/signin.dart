@@ -1,3 +1,6 @@
+
+import 'package:auto_play/Pages/forget_pw_2.dart';
+import 'package:auto_play/Pages/register.dart';
 import 'package:flutter/material.dart';
 
 class SigninPage extends StatefulWidget {
@@ -115,8 +118,9 @@ Widget buildforgottenpw(){
   return Container(
     alignment: Alignment.centerRight,
     child: TextButton(
-      onPressed: () => print("forgotten Password pressed"),
-     
+      onPressed: () {
+      Navigator.push(context, MaterialPageRoute(builder: (context)=> const ForgetPw2()));
+      },
       child: Text("Forgot Password",
       style: TextStyle(
         color: Colors.white,
@@ -170,7 +174,7 @@ Widget buildLoginBtn() {
           primary: Color.fromARGB(255, 4, 21, 35),
         ),
         child: Text(
-          "LOGIN",
+          "LOG IN",
           style: TextStyle(
             color: Colors.white,
             fontSize: 18,
@@ -183,7 +187,9 @@ Widget buildLoginBtn() {
 
   Widget buildSignupBtn(){
     return GestureDetector(
-      onTap: () => print("Sign up pressed") ,
+      onTap: (){
+        Navigator.push(context, MaterialPageRoute(builder: (context)=> const Register()));
+      } ,
       child: RichText(text: TextSpan(
         children: [
           TextSpan(
