@@ -32,7 +32,7 @@ class _FavoriteState extends State<Favorite> {
                         builder: (context) => Home(),
                       ));
 
-                  Navigator.pop(context, const Home());
+                  
 
                 },
                 icon: const Icon(Icons.home),
@@ -62,19 +62,8 @@ class _FavoriteState extends State<Favorite> {
                 },
                 icon: Icon(Icons.account_circle),
 
-              IconButton(
-                onPressed: () {},
-                icon: const Icon(Icons.favorite),
-                iconSize: 40,
-                color: Colors.black,
-              ),
-              IconButton(
-                onPressed: () {},
-                icon: const Icon(Icons.restart_alt),
-
-                iconSize: 40,
-                color: Colors.black,
-              ),
+                ),
+                
             ],
           ),
         ),
