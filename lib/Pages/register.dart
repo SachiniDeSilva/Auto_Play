@@ -1,4 +1,6 @@
+
 import 'package:auto_play/Pages/privacy_&_policy.dart';
+
 import 'package:auto_play/Pages/term_to_use.dart';
 import 'package:flutter/material.dart';
 
@@ -229,7 +231,11 @@ Widget buildVerifyBtn() {
   Widget buildPrivacy(){
     return GestureDetector(
       onTap: (){
+
         Navigator.push(context, MaterialPageRoute(builder: (context)=> const PrivacyPolicy()));
+
+
+
       } ,
       child: RichText(text: const TextSpan(
         children: [
