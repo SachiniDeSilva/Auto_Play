@@ -1,3 +1,5 @@
+import 'package:auto_play/Pages/forget_pw_2.dart';
+import 'package:auto_play/Pages/register.dart';
 import 'package:flutter/material.dart';
 
 class SigninPage extends StatefulWidget {
@@ -115,8 +117,9 @@ Widget buildforgottenpw(){
   return Container(
     alignment: Alignment.centerRight,
     child: TextButton(
-      onPressed: () => print("forgotten Password pressed"),
-     
+      onPressed: () {
+      Navigator.push(context, MaterialPageRoute(builder: (context)=> const ForgetPw2()));
+      },
       child: Text("Forgot Password",
       style: TextStyle(
         color: Colors.white,
@@ -170,7 +173,7 @@ Widget buildLoginBtn() {
           primary: Color.fromARGB(255, 4, 21, 35),
         ),
         child: Text(
-          "LOGIN",
+          "LOG IN",
           style: TextStyle(
             color: Colors.white,
             fontSize: 18,
@@ -183,7 +186,9 @@ Widget buildLoginBtn() {
 
   Widget buildSignupBtn(){
     return GestureDetector(
-      onTap: () => print("Sign up pressed") ,
+      onTap: (){
+        Navigator.push(context, MaterialPageRoute(builder: (context)=> const Register()));
+      } ,
       child: RichText(text: TextSpan(
         children: [
           TextSpan(
@@ -218,7 +223,7 @@ Widget buildLoginBtn() {
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
                 colors: [
-                  Color.fromARGB(255, 149, 197, 208),
+                  Colors.white,
                   Colors.blue,
                 ],
               ),
@@ -229,7 +234,7 @@ Widget buildLoginBtn() {
             physics: AlwaysScrollableScrollPhysics(),
             padding: EdgeInsets.symmetric(
               horizontal: 25,
-              vertical: 50,
+              vertical: 20,
             ),
             
             child: Column(
@@ -245,13 +250,13 @@ Widget buildLoginBtn() {
                 Text(
                   "Sign In",
                   style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 40,
+                    color: Colors.black,
+                    fontSize: 30,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
                 SizedBox(
-                  height: 50,
+                  height: 20,
                 ),
                 buildEmail(),
                 SizedBox(height: 20,),
@@ -259,6 +264,43 @@ Widget buildLoginBtn() {
                 buildforgottenpw(),
                 buildRemember(),
                 buildLoginBtn(),
+                 Padding(
+                      padding: const EdgeInsets.only(top: 15),
+                      child: Text(
+                        'or',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            fontStyle: FontStyle.italic),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 15),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          IconButton(
+                            onPressed: () {},
+                            icon: Icon(Icons.facebook),
+                            iconSize: 30,
+                            color: Colors.black,
+                          ),
+                          IconButton(
+                            onPressed: () {},
+                            icon: Image.asset(
+                              'assets/flat-color-icons_google.png',
+                            ),
+                          ),
+                          IconButton(
+                            onPressed: () {},
+                            icon: Icon(Icons.apple),
+                            iconSize: 30,
+                            color: Colors.black,
+                          ),
+                        ],
+                      ),
+                    ),
                 buildSignupBtn(),
               ],
             ),
