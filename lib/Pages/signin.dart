@@ -267,8 +267,7 @@ Widget buildLoginBtn() {
                 buildLoginBtn(),
                  Padding(
                       padding: const EdgeInsets.only(top: 15),
-                      child: Text(
-                        '------- or -------',
+                      child: Text('------- Or -------' ,
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 18,
