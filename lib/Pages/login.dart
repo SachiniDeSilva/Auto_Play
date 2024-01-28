@@ -101,15 +101,13 @@ class _LogInState extends State<LogIn> {
                       fontWeight: FontWeight.bold,
                       color: Colors.black),
                 ),
-               SizedBox(height: 100,),
-                      Column(
-          children: <Widget>[
-            MaterialButton(
-              minWidth: double.infinity,
-              height: 60,
-              onPressed: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context)=> const SigninPage()));
-              },
+               SizedBox(height: 100),
+MaterialButton(
+  minWidth: 250, // Set the desired minimum width
+  height: 60,
+  onPressed: () {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => const SigninPage()));
+  },
               color: Colors.white,
               shape: RoundedRectangleBorder(
                 side: BorderSide(
@@ -123,13 +121,13 @@ class _LogInState extends State<LogIn> {
                 color: Colors.black,
               ),),
             ),
-            SizedBox(height: 20,),
-             MaterialButton(
-              minWidth: double.infinity,
-              height: 60,
-              onPressed: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context)=> const Register()));
-              },
+            SizedBox(height: 20),
+MaterialButton(
+  minWidth: 250, // Set the desired minimum width
+  height: 60,
+  onPressed: () {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => const Register()));
+  },
               color:  Color.fromARGB(255, 4, 21, 35),
 
               shape: RoundedRectangleBorder(
@@ -152,10 +150,10 @@ class _LogInState extends State<LogIn> {
             )
                 
               
-          ],
-    ),
+          
     ),
     );
+    
           
   }
 }
