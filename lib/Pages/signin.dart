@@ -122,7 +122,7 @@ Widget buildforgottenpw(){
       },
       child: Text("Forgot Password",
       style: TextStyle(
-        color: Colors.white,
+        color:  Color.fromARGB(255, 4, 21, 35),
         fontWeight: FontWeight.bold,
       ),)
 
@@ -171,6 +171,7 @@ Widget buildLoginBtn() {
             borderRadius: BorderRadius.circular(15),
           ),
           primary: Color.fromARGB(255, 4, 21, 35),
+           minimumSize: Size(300, 20),
         ),
         child: Text(
           "LOG IN",
@@ -202,7 +203,7 @@ Widget buildLoginBtn() {
           TextSpan(
             text: 'Sign Up',
             style: TextStyle(
-              color: Colors.white,
+              color:  Color.fromARGB(255, 4, 21, 35),
               fontSize: 18,
               fontWeight: FontWeight.bold,
             )
@@ -266,8 +267,7 @@ Widget buildLoginBtn() {
                 buildLoginBtn(),
                  Padding(
                       padding: const EdgeInsets.only(top: 15),
-                      child: Text(
-                        'or',
+                      child: Text('------- Or -------' ,
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 18,
