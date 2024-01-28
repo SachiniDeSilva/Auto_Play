@@ -1,4 +1,3 @@
-
 import 'package:auto_play/Pages/forget_pw_2.dart';
 import 'package:auto_play/Pages/register.dart';
 import 'package:flutter/material.dart';
