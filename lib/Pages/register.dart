@@ -19,13 +19,12 @@ class Register extends StatefulWidget {
 
 class _RegisterState extends State<Register> {
   final firebaseAuthService _auth = firebaseAuthService();
-  
     TextEditingController _emailController = TextEditingController();
       TextEditingController _passwordController = TextEditingController();
 
   @override
   void dispose(){
-   
+
     _emailController.dispose();
     _passwordController.dispose();
     super.dispose();
@@ -378,6 +377,7 @@ Widget buildVerifyBtn() {
     );
   }
   void _signup() async{
+
     
     String email = _emailController.text;
     String password = _passwordController.text;
@@ -386,15 +386,23 @@ Widget buildVerifyBtn() {
     User? user = await _auth.signUpWithEmailAndPassword(email, password);
     
 
+
     if (user != null) {
       print("User is successfully created");
       Navigator.pushNamed(context, "/home"); // Navigate to home upon successful signup
     } else {
       print("User creation failed"); // Log an error if user is null
     }
+
   } 
   
 }
+
+
+
+
+   
+
 
 
 
