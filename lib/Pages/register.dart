@@ -5,6 +5,9 @@ import 'package:auto_play/Pages/term_to_use.dart';
 import 'package:auto_play/userAuth/firebase_auth.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:auto_play/firebase_options.dart';
+
 
 
 class Register extends StatefulWidget {
@@ -16,13 +19,12 @@ class Register extends StatefulWidget {
 
 class _RegisterState extends State<Register> {
   final firebaseAuthService _auth = firebaseAuthService();
-  TextEditingController _userNameController = TextEditingController();
     TextEditingController _emailController = TextEditingController();
       TextEditingController _passwordController = TextEditingController();
 
   @override
   void dispose(){
-    _userNameController.dispose();
+
     _emailController.dispose();
     _passwordController.dispose();
     super.dispose();
@@ -375,13 +377,15 @@ Widget buildVerifyBtn() {
     );
   }
   void _signup() async{
-    String username = _userNameController.text;
+
+    
     String email = _emailController.text;
     String password = _passwordController.text;
 
-   try {
-    UserCredential userCredential = (await _auth.signUpWithEmailAndPassword(email, password)) as UserCredential;
-    User? user = userCredential.user;
+  
+    User? user = await _auth.signUpWithEmailAndPassword(email, password);
+    
+
 
     if (user != null) {
       print("User is successfully created");
@@ -389,11 +393,16 @@ Widget buildVerifyBtn() {
     } else {
       print("User creation failed"); // Log an error if user is null
     }
-  } catch (e) {
-    print("Error occurred during signup: $e"); // Log any exceptions that occur during signup
-  }
+
+  } 
+  
 }
 
 
 
-}
+
+   
+
+
+
+
