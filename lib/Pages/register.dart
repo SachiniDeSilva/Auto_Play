@@ -2,6 +2,8 @@
 import 'package:auto_play/Pages/privacy_&_policy.dart';
 
 import 'package:auto_play/Pages/term_to_use.dart';
+import 'package:auto_play/userAuth/firebase_auth.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 
@@ -13,6 +15,18 @@ class Register extends StatefulWidget {
 }
 
 class _RegisterState extends State<Register> {
+  final firebaseAuthService _auth = firebaseAuthService();
+  TextEditingController _userNameController = TextEditingController();
+    TextEditingController _emailController = TextEditingController();
+      TextEditingController _passwordController = TextEditingController();
+
+  @override
+  void dispose(){
+    _userNameController.dispose();
+    _emailController.dispose();
+    _passwordController.dispose();
+    super.dispose();
+  }
   bool isRememberMe = false;
 
   Widget buildEmail() {
@@ -173,9 +187,7 @@ Widget buildVerifyBtn() {
       padding: const EdgeInsets.symmetric(vertical: 25),
       width: double.infinity,
       child: ElevatedButton(
-        onPressed: (){
-          //verify button link
-        },
+        onPressed: _signup, 
         style: ElevatedButton.styleFrom(
           elevation: 5,
           padding: const EdgeInsets.all(15),
@@ -362,8 +374,26 @@ Widget buildVerifyBtn() {
       ),
     );
   }
+  void _signup() async{
+    String username = _userNameController.text;
+    String email = _emailController.text;
+    String password = _passwordController.text;
+
+   try {
+    UserCredential userCredential = (await _auth.signUpWithEmailAndPassword(email, password)) as UserCredential;
+    User? user = userCredential.user;
+
+    if (user != null) {
+      print("User is successfully created");
+      Navigator.pushNamed(context, "/home"); // Navigate to home upon successful signup
+    } else {
+      print("User creation failed"); // Log an error if user is null
+    }
+  } catch (e) {
+    print("Error occurred during signup: $e"); // Log any exceptions that occur during signup
+  }
 }
 
 
 
-    
+}
