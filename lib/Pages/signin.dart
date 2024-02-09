@@ -17,7 +17,7 @@ class _SigninPageState extends State<SigninPage> {
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: <Widget>[
-      Text(
+      const Text(
         "Email",
         style: TextStyle(
           color: Colors.white,
@@ -25,7 +25,7 @@ class _SigninPageState extends State<SigninPage> {
           fontWeight: FontWeight.bold,
         ),
       ),
-      SizedBox(
+      const SizedBox(
         height: 10,
       ),
       Container(
@@ -34,7 +34,7 @@ class _SigninPageState extends State<SigninPage> {
           color: Colors.white,
           borderRadius: BorderRadius.circular(10),
           boxShadow: [
-            BoxShadow(
+            const BoxShadow(
               color: Colors.black26,
               blurRadius: 6,
               offset: Offset(0, 2),
@@ -42,7 +42,7 @@ class _SigninPageState extends State<SigninPage> {
           ],
         ),
         height: 60,
-        child: TextField(
+        child: const TextField(
           keyboardType: TextInputType.emailAddress,
           style: TextStyle(
             color: Colors.black87,
@@ -67,7 +67,7 @@ Widget buildPassword() {
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: <Widget>[
-      Text(
+      const Text(
         "Password",
         style: TextStyle(
           color: Colors.white,
@@ -75,7 +75,7 @@ Widget buildPassword() {
           fontWeight: FontWeight.bold,
         ),
       ),
-      SizedBox(
+      const SizedBox(
         height: 10,
       ),
       Container(
@@ -84,7 +84,7 @@ Widget buildPassword() {
           color: Colors.white,
           borderRadius: BorderRadius.circular(10),
           boxShadow: [
-            BoxShadow(
+            const BoxShadow(
               color: Colors.black26,
               blurRadius: 6,
               offset: Offset(0, 2),
@@ -92,7 +92,7 @@ Widget buildPassword() {
           ],
         ),
         height: 60,
-        child: TextField(
+        child: const TextField(
          obscureText: true,
           style: TextStyle(
             color: Colors.black87,
@@ -120,7 +120,7 @@ Widget buildforgottenpw(){
       onPressed: () {
       Navigator.push(context, MaterialPageRoute(builder: (context)=> const ForgetPw2()));
       },
-      child: Text("Forgot Password",
+      child: const Text("Forgot Password",
       style: TextStyle(
         color:  Color.fromARGB(255, 4, 21, 35),
         fontWeight: FontWeight.bold,
@@ -149,7 +149,7 @@ Widget buildRemember(){
             });
           } ,
         ),),
-        Text("Remember me",
+        const Text("Remember me",
         style: TextStyle(
           color: Colors.white,
           fontWeight: FontWeight.bold,
@@ -160,20 +160,20 @@ Widget buildRemember(){
 }
 Widget buildLoginBtn() {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 25),
+      padding: const EdgeInsets.symmetric(vertical: 25),
       width: double.infinity,
       child: ElevatedButton(
         onPressed: () => print("Login Pressed"),
         style: ElevatedButton.styleFrom(
           elevation: 5,
-          padding: EdgeInsets.all(15),
+          padding: const EdgeInsets.all(15),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(15),
           ),
-          primary: Color.fromARGB(255, 4, 21, 35),
-           minimumSize: Size(300, 20),
+          primary: const Color.fromARGB(255, 4, 21, 35),
+           minimumSize: const Size(300, 20),
         ),
-        child: Text(
+        child: const Text(
           "LOG IN",
           style: TextStyle(
             color: Colors.white,
@@ -190,7 +190,7 @@ Widget buildLoginBtn() {
       onTap: (){
         Navigator.push(context, MaterialPageRoute(builder: (context)=> const Register()));
       } ,
-      child: RichText(text: TextSpan(
+      child: RichText(text: const TextSpan(
         children: [
           TextSpan(
             text: 'Don\'t have an Account?',
@@ -219,7 +219,7 @@ Widget buildLoginBtn() {
       body: Stack(
         children: [
           Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
@@ -232,8 +232,8 @@ Widget buildLoginBtn() {
           ),
         
           SingleChildScrollView(
-            physics: AlwaysScrollableScrollPhysics(),
-            padding: EdgeInsets.symmetric(
+            physics: const AlwaysScrollableScrollPhysics(),
+            padding: const EdgeInsets.symmetric(
               horizontal: 25,
               vertical: 20,
             ),
@@ -245,10 +245,10 @@ Widget buildLoginBtn() {
                   'assets/Group_6.png', // Replace with the actual image path
                   height: 100,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20, // Adjust the space between logo and "Sign In" text
                 ),
-                Text(
+                const Text(
                   "Sign In",
                   style: TextStyle(
                     color: Colors.black,
@@ -256,17 +256,17 @@ Widget buildLoginBtn() {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 buildEmail(),
-                SizedBox(height: 20,),
+                const SizedBox(height: 20,),
                 buildPassword(),
                 buildforgottenpw(),
                 buildRemember(),
                 buildLoginBtn(),
-                 Padding(
-                      padding: const EdgeInsets.only(top: 15),
+                 const Padding(
+                      padding: EdgeInsets.only(top: 15),
                       child: Text('------- Or -------' ,
                         style: TextStyle(
                             color: Colors.white,
@@ -282,7 +282,7 @@ Widget buildLoginBtn() {
                         children: [
                           IconButton(
                             onPressed: () {},
-                            icon: Icon(Icons.facebook),
+                            icon: const Icon(Icons.facebook),
                             iconSize: 30,
                             color: Colors.black,
                           ),
@@ -294,7 +294,7 @@ Widget buildLoginBtn() {
                           ),
                           IconButton(
                             onPressed: () {},
-                            icon: Icon(Icons.apple),
+                            icon: const Icon(Icons.apple),
                             iconSize: 30,
                             color: Colors.black,
                           ),

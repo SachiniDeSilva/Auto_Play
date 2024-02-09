@@ -1,6 +1,7 @@
 import 'package:auto_play/Pages/register.dart';
 import 'package:auto_play/Pages/signin.dart';
 
+
 import 'package:flutter/material.dart';
 
 class LogIn extends StatefulWidget {
@@ -11,6 +12,10 @@ class LogIn extends StatefulWidget {
 }
 
 class _LogInState extends State<LogIn> {
+
+
+  //Initialize firebase
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
