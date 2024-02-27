@@ -115,33 +115,33 @@ MaterialButton(
   },
               color: Colors.white,
               shape: RoundedRectangleBorder(
-                side: BorderSide(
+                side: const BorderSide(
                   color: Colors.white,
                 ),
                 borderRadius: BorderRadius.circular(50)
               ),
-              child: Text("Sign In", style: TextStyle(
+              child: const Text("Sign In", style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 18,
                 color: Colors.black,
               ),),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
 MaterialButton(
   minWidth: 250, // Set the desired minimum width
   height: 60,
   onPressed: () {
     Navigator.push(context, MaterialPageRoute(builder: (context) => const Register()));
   },
-              color:  Color.fromARGB(255, 4, 21, 35),
+              color:  const Color.fromARGB(255, 4, 21, 35),
 
               shape: RoundedRectangleBorder(
-                side: BorderSide(
+                side: const BorderSide(
                   color:  Color.fromARGB(255, 4, 21, 35),
                 ),
                 borderRadius: BorderRadius.circular(50)
               ),
-              child: Text("Signup", style: TextStyle(
+              child: const Text("Signup", style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
                 fontSize: 18,

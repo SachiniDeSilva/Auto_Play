@@ -113,7 +113,8 @@ class _ForgetPw1State extends State<ForgetPw1> {
                               fontWeight: FontWeight.bold,
                               fontSize: 18,
                               fontStyle: FontStyle.italic,
-                              decoration: TextDecoration.underline),
+                              decoration: TextDecoration.underline
+                              ),
                         ),
                       ),
                     ),

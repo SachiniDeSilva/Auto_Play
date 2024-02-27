@@ -1,4 +1,7 @@
+import 'package:auto_play/Pages/forget_pw_1.dart';
 import 'package:auto_play/Pages/forget_pw_2.dart';
+import 'package:auto_play/Pages/forget_pw_3.dart';
+import 'package:auto_play/Pages/loadingPage.dart';
 import 'package:auto_play/Pages/register.dart';
 import 'package:flutter/material.dart';
 
@@ -20,7 +23,7 @@ class _SigninPageState extends State<SigninPage> {
       const Text(
         "Email",
         style: TextStyle(
-          color: Colors.white,
+          color: Color.fromARGB(255, 222, 220, 220),
           fontSize: 16,
           fontWeight: FontWeight.bold,
         ),
@@ -163,7 +166,9 @@ Widget buildLoginBtn() {
       padding: const EdgeInsets.symmetric(vertical: 25),
       width: double.infinity,
       child: ElevatedButton(
-        onPressed: () => print("Login Pressed"),
+        onPressed: (){
+    Navigator.push(context, MaterialPageRoute(builder: (context) => const Loading()));
+  } ,
         style: ElevatedButton.styleFrom(
           elevation: 5,
           padding: const EdgeInsets.all(15),

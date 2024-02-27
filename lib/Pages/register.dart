@@ -5,6 +5,9 @@ import 'package:auto_play/Pages/term_to_use.dart';
 import 'package:auto_play/userAuth/firebase_auth.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:auto_play/firebase_options.dart';
+
 
 
 
@@ -17,10 +20,26 @@ class Register extends StatefulWidget {
 }
 
 class _RegisterState extends State<Register> {
-  final firebaseAuthService _auth = firebaseAuthService();
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+
     TextEditingController _emailController = TextEditingController();
       TextEditingController _passwordController = TextEditingController();
 
+      String _email ="";
+      String _password = "";
+void _handleSignUp() async{
+  try{
+    UserCredential userCredential =
+    await _auth.createUserWithEmailAndPassword(email: _email, password: _password);
+    print("User registered: ${userCredential.user!.email}");
+
+
+  }catch(e){
+    print("Error during Registration:$e");
+  }
+
+}
   @override
   void dispose(){
 
@@ -30,10 +49,13 @@ class _RegisterState extends State<Register> {
   }
   bool isRememberMe = false;
 
-  Widget buildEmail() {
+  Widget buildEmail(
+  
+  ) {
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: <Widget>[
+    
       const Text(
         "Email",
         style: TextStyle(
@@ -188,7 +210,7 @@ Widget buildVerifyBtn() {
       padding: const EdgeInsets.symmetric(vertical: 25),
       width: double.infinity,
       child: ElevatedButton(
-        onPressed: _signup, 
+        onPressed: _handleSignUp, 
         style: ElevatedButton.styleFrom(
           elevation: 5,
           padding: const EdgeInsets.all(15),
@@ -322,13 +344,15 @@ Widget buildVerifyBtn() {
                 const SizedBox(
                   height: 20,
                 ),
-                buildEmail(),
+                buildEmail()
+                ,
                 const SizedBox(height: 20,),
                 buildPassword(),
                 const SizedBox(height: 20,),
                 buildconfirmPassword(),
                 
                 buildVerifyBtn(),
+                
                  const Padding(
                       padding: EdgeInsets.only(top: 15),
                       child: Text(
@@ -375,12 +399,4 @@ Widget buildVerifyBtn() {
       ),
     );
   }
-
-
-
-
-   
-
-
-
-
+}

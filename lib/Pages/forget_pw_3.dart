@@ -1,3 +1,4 @@
+import 'package:auto_play/Pages/signin.dart';
 import 'package:flutter/material.dart';
 
 class ForgetPw3 extends StatefulWidget {
@@ -117,7 +118,9 @@ class _ForgetPw3State extends State<ForgetPw3> {
                               borderRadius: BorderRadius.circular(30)),
                           backgroundColor: Color.fromARGB(255, 4, 21, 35),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => const SigninPage()));
+  },
                         child: Text(
                           'SUBMIT',
                           style: TextStyle(

@@ -1,4 +1,6 @@
+import 'package:auto_play/Pages/forget_pw_3.dart';
 import 'package:auto_play/Pages/register.dart';
+import 'package:auto_play/Pages/signin.dart';
 import 'package:flutter/material.dart';
 
 class ForgetPw2 extends StatefulWidget {
@@ -97,6 +99,9 @@ class _ForgetPw2State extends State<ForgetPw2> {
                             ),
                           ),
                           GestureDetector(
+                             onTap: (){
+        Navigator.push(context, MaterialPageRoute(builder: (context)=> const SigninPage()));
+      } ,
                             child: Padding(
                               padding: const EdgeInsets.only(left: 16),
                               child: Text(
@@ -120,7 +125,9 @@ class _ForgetPw2State extends State<ForgetPw2> {
                               borderRadius: BorderRadius.circular(30)),
                           backgroundColor: Color.fromARGB(255, 4, 21, 35),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => const ForgetPw3()));
+  },
                         child: Text(
                           'SEND',
                           style: TextStyle(
