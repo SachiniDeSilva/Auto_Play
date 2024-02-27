@@ -375,27 +375,6 @@ Widget buildVerifyBtn() {
       ),
     );
   }
-  void _signup() async{
-
-    
-    String email = _emailController.text;
-    String password = _passwordController.text;
-
-  
-    User? user = await _auth.signUpWithEmailAndPassword(email, password);
-    
-
-
-    if (user != null) {
-      print("User is successfully created");
-      Navigator.pushNamed(context, "/home"); // Navigate to home upon successful signup
-    } else {
-      print("User creation failed"); // Log an error if user is null
-    }
-
-  } 
-  
-}
 
 
 
