@@ -6,6 +6,10 @@ import 'firebase_options.dart';
 import 'Routes/route_manager.dart';
 
 void main()async {
+
+  WidgetsFlutterBinding.ensureInitialized();
+
+
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
 );
