@@ -1,6 +1,5 @@
 import 'package:auto_play/Pages/bottomNav.dart';
-import 'package:auto_play/Pages/get_start.dart';
-import 'package:auto_play/Pages/home.dart';
+
 import 'package:auto_play/Pages/view_profile.dart';
 import 'package:flutter/material.dart';
 
