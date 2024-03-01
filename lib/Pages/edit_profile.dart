@@ -171,32 +171,7 @@ class _EditProfileState extends State<EditProfile> {
           );
         }),
       ),
-      bottomNavigationBar: BottomAppBar(
-        color: const Color.fromARGB(255, 92, 174, 240),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.home),
-              iconSize: 40,
-              color: Colors.black,
-            ),
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.favorite),
-              iconSize: 40,
-              color: Colors.black,
-            ),
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.account_circle),
-              iconSize: 40,
-              color: Colors.black,
-            ),
-          ],
-        ),
-      ),
+
     );
   }
 }
