@@ -20,70 +20,72 @@ class _WeatherState extends State<Weather> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Padding(
-        padding: EdgeInsets.only(top: 60, left: 20, right: 20),
-        child: Column(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Container(
-                  child: Image.asset('assets/Group_6.png'),
-                  height: 100,
-                ),
-                Container(
-                  child: Image.asset('assets/Ellipse 14.png'),
-                  height: 100,
-                ),
-              ],
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right: 320),
-              child: IconButton(
-                onPressed: () {
-                  Navigator.pop(context, GetStart());
-                },
-                icon: Icon(
-                  Icons.arrow_back,
-                  color: Colors.black,
-                ),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.only(top: 60, left: 20, right: 20),
+          child: Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
+                    child: Image.asset('assets/Group_6.png'),
+                    height: 100,
+                  ),
+                  Container(
+                    child: Image.asset('assets/Ellipse 14.png'),
+                    height: 100,
+                  ),
+                ],
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 150),
-              child: Center(
-                child: Text(
-                  'Identifying your\n       weather',
-                  style: TextStyle(
-                      color: Colors.blue,
-                      fontSize: 30,
-                      height: 1.5,
-                      fontWeight: FontWeight.bold),
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 100,
-            ),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10)),
-                  backgroundColor: Color.fromARGB(255, 4, 21, 35),
-                  fixedSize: Size(200, 50)),
-              onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) {
-                    return Weather_1();
+              Padding(
+                padding: const EdgeInsets.only(right: 320),
+                child: IconButton(
+                  onPressed: () {
+                    Navigator.pop(context, GetStart());
                   },
-                ));
-              },
-              child: Text(
-                'Submit',
-                style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                  icon: Icon(
+                    Icons.arrow_back,
+                    color: Colors.black,
+                  ),
+                ),
               ),
-            ),
-          ],
+              Padding(
+                padding: const EdgeInsets.only(top: 150),
+                child: Center(
+                  child: Text(
+                    'Identifying your\n       weather',
+                    style: TextStyle(
+                        color: Colors.blue,
+                        fontSize: 30,
+                        height: 1.5,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 100,
+              ),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10)),
+                    backgroundColor: Color.fromARGB(255, 4, 21, 35),
+                    fixedSize: Size(200, 50)),
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) {
+                      return Weather_1();
+                    },
+                  ));
+                },
+                child: Text(
+                  'Submit',
+                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
       bottomNavigationBar: BottomAppBar(

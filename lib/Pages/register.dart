@@ -22,7 +22,7 @@ class Register extends StatefulWidget {
 class _RegisterState extends State<Register> {
 
   final FirebaseAuth _auth = FirebaseAuth.instance;
-  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  //final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
     TextEditingController _emailController = TextEditingController();
       TextEditingController _passwordController = TextEditingController();
@@ -399,4 +399,5 @@ Widget buildVerifyBtn() {
         ],
       ),
     );
+  }
   }

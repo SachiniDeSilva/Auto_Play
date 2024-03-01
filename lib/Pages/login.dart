@@ -20,6 +20,7 @@ class _LogInState extends State<LogIn> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        
         body: Stack(
           children: [
             Container(

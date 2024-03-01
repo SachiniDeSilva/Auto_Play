@@ -20,50 +20,7 @@ class _GetStartState extends State<GetStart> {
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.white,
-        bottomNavigationBar: BottomAppBar(
-          color: Color.fromARGB(255, 205, 203, 203),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              IconButton(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => Home(),
-                      ));
-                },
-                icon: Icon(Icons.home),
-                iconSize: 40,
-                color: Colors.black,
-              ),
-              IconButton(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => Favorite(),
-                      ));
-                },
-                icon: Icon(Icons.favorite),
-                iconSize: 40,
-                color: Colors.black,
-              ),
-              IconButton(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => ViewProfile(),
-                      ));
-                },
-                icon: Icon(Icons.account_circle),
-                iconSize: 40,
-                color: Colors.black,
-              ),
-            ],
-          ),
-        ),
+
         body: Padding(
           padding: const EdgeInsets.only(top: 60, left: 20, right: 20),
           child: Column(

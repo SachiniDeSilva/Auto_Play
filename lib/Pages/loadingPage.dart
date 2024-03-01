@@ -1,5 +1,6 @@
-import 'package:auto_play/Pages/get_start.dart';
-import 'package:auto_play/Pages/home.dart';
+import 'package:auto_play/Pages/bottomNav.dart';
+
+import 'package:auto_play/Pages/view_profile.dart';
 import 'package:flutter/material.dart';
 
 class Loading extends StatefulWidget {
@@ -28,7 +29,7 @@ class _LoadingState extends State<Loading> {
                 SizedBox(height: 150),
                 ElevatedButton(
                   onPressed: () {
-                     Navigator.push(context, MaterialPageRoute(builder: (context) => const GetStart()));
+                     Navigator.push(context, MaterialPageRoute(builder: (context) => const BottomNav()));
                   },
                   child: Text('Ready to start with AutoBeats',
                   style: TextStyle(
@@ -49,13 +50,22 @@ class _LoadingState extends State<Loading> {
               ],
             ),
           ),
+          
           Positioned(
+            
             top: 10,
             right: 10,
+            child: GestureDetector(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const ViewProfile()));
+
+              },
+            
             child: CircleAvatar(
-              radius: 30,
-             // Placeholder for user profile photo
+              radius: 35,
+             backgroundImage: AssetImage('assets/Ellipse 14.png'),
             ),
+          ),
           ),
         ],
       ),
