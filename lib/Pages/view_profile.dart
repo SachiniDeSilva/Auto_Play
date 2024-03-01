@@ -19,9 +19,11 @@ class _ViewProfileState extends State<ViewProfile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
       body: SingleChildScrollView(
         child: Builder(builder: (context) {
           return Container(
+            height: 700,
             decoration: const BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment.topCenter,
@@ -32,30 +34,34 @@ class _ViewProfileState extends State<ViewProfile> {
             
             child: Center(
               child: Padding(
-                padding: const EdgeInsets.only(top: 120.0),
+                padding: const EdgeInsets.only(top: 20),
                 child: Column(
-                  
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.only(right: 300.0),
-                      child: IconButton(
+                    IconButton(
                         color: Colors.black,
                         onPressed: () {
                           Navigator.pop(context, const MyDrawer());
                         },
                         icon: const Icon(Icons.arrow_back),
                       ),
-                    ),
-                    ClipOval(
-                      child: Image.asset(
+                    SizedBox(height: 20,),
+                    
+                    Center(child: ClipOval(
+                      child:Stack(
+                        children: [
+                      Image.asset(
                         'assets/Ellipse 14.png',
                         width: 100.0,
                       ),
+                        ],
+                    ),
+                    )
                     ),
                     Padding(
                       padding: const EdgeInsets.fromLTRB(20, 80, 20, 20),
                       child: Container(
-                        height: 400.0,
+                        height: 300.0,
                         decoration: BoxDecoration(
                           color: Colors.white,
                           border: Border.all(color: Colors.black),
@@ -74,10 +80,11 @@ class _ViewProfileState extends State<ViewProfile> {
                                     builder: (_) {
                                       return EditProfile();
                                     },
-                                  ));
+                                  )
+                                  );
                                 },
                                 child: const Padding(
-                                  padding: EdgeInsets.only(right: 160),
+                                  padding: EdgeInsets.only(right: 160, top: 10),
                                   child: Text(
                                     'Edit Profile',
                                     style: TextStyle(
@@ -92,7 +99,7 @@ class _ViewProfileState extends State<ViewProfile> {
                             const Divider(
                               height: 8,
                               color: Color.fromARGB(152, 158, 158, 158),
-                              thickness: 3,
+                              
                             ),
                             ListTile(
                               leading: Image.asset('assets/􀣋.png'),
@@ -102,7 +109,7 @@ class _ViewProfileState extends State<ViewProfile> {
                                         MaterialStatePropertyAll(Colors.blue)),
                                 onPressed: () {},
                                 child: const Padding(
-                                  padding: EdgeInsets.only(right: 190),
+                                  padding: EdgeInsets.only(right: 190, top: 10),
                                   child: Text(
                                     'Settings',
                                     style: TextStyle(
@@ -117,14 +124,13 @@ class _ViewProfileState extends State<ViewProfile> {
                             const Divider(
                               height: 8,
                               color: Color.fromARGB(152, 158, 158, 158),
-                              thickness: 3,
+                            
                             ),
                             ListTile(
                               leading: Image.asset('assets/↳Color.png'),
                               title: TextButton(
                                 style: ButtonStyle(
-                                    overlayColor:
-                                        MaterialStatePropertyAll(Colors.blue)),
+                                   ),
                                 onPressed: () {},
                                 child: const Padding(
                                   padding: EdgeInsets.only(right: 70),
@@ -155,13 +161,12 @@ class _ViewProfileState extends State<ViewProfile> {
                             const Divider(
                               height: 8,
                               color: Color.fromARGB(152, 158, 158, 158),
-                              thickness: 3,
+                            
                             ),
                             ListTile(
                               title: TextButton(
                                 style: ButtonStyle(
-                                    overlayColor:
-                                        MaterialStatePropertyAll(Colors.blue)),
+                                    ),
                                 onPressed: () {},
                                 child: const Padding(
                                   padding: EdgeInsets.only(right: 60),
@@ -201,7 +206,7 @@ class _ViewProfileState extends State<ViewProfile> {
                             const Divider(
                               height: 8,
                               color: Color.fromARGB(152, 158, 158, 158),
-                              thickness: 3,
+                            
                             ),
                           ],
                         ),
