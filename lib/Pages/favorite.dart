@@ -25,7 +25,6 @@ class _FavoriteState extends State<Favorite> {
             children: [
               IconButton(
                 onPressed: () {
-
                   Navigator.push(
                       context,
                       MaterialPageRoute(
@@ -33,13 +32,11 @@ class _FavoriteState extends State<Favorite> {
                       ));
 
                   Navigator.pop(context, const Home());
-
                 },
                 icon: const Icon(Icons.home),
                 iconSize: 40,
                 color: Colors.black,
               ),
-
               Container(
                 decoration: BoxDecoration(
                   color: const Color.fromARGB(255, 2, 27, 48),
@@ -53,6 +50,7 @@ class _FavoriteState extends State<Favorite> {
                 ),
               ),
               IconButton(
+                icon: Icon(Icons.account_circle),
                 onPressed: () {
                   Navigator.of(context).push(MaterialPageRoute(
                     builder: (_) {
@@ -60,18 +58,10 @@ class _FavoriteState extends State<Favorite> {
                     },
                   ));
                 },
-                icon: Icon(Icons.account_circle),
-
-              IconButton(
-                onPressed: () {},
-                icon: const Icon(Icons.favorite),
-                iconSize: 40,
-                color: Colors.black,
               ),
               IconButton(
                 onPressed: () {},
-                icon: const Icon(Icons.restart_alt),
-
+                icon: const Icon(Icons.favorite),
                 iconSize: 40,
                 color: Colors.black,
               ),
@@ -133,8 +123,7 @@ class _FavoriteState extends State<Favorite> {
                         child: Column(
                           children: [
                             const Padding(
-                              padding:
-                                  EdgeInsets.only(right: 285, top: 30),
+                              padding: EdgeInsets.only(right: 285, top: 30),
                               child: Text(
                                 'Favorite',
                                 textAlign: TextAlign.start,
@@ -149,7 +138,8 @@ class _FavoriteState extends State<Favorite> {
                               padding: const EdgeInsets.only(top: 30),
                               child: Container(
                                 decoration: BoxDecoration(
-                                  color: const Color.fromARGB(117, 158, 158, 158),
+                                  color:
+                                      const Color.fromARGB(117, 158, 158, 158),
                                   borderRadius: BorderRadius.circular(12),
                                 ),
                                 child: ListTile(

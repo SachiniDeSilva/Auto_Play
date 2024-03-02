@@ -225,11 +225,7 @@ class _DayMusic1State extends State<DayMusic1> {
             ),
             IconButton(
               onPressed: () {},
-
-              icon: Icon(Icons.account_circle),
-
               icon: const Icon(Icons.restart_alt),
-
               iconSize: 40,
               color: Colors.black,
             ),
