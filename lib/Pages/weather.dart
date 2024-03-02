@@ -22,7 +22,7 @@ class _WeatherState extends State<Weather> {
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.only(top: 60, left: 20, right: 20),
+          padding: EdgeInsets.only(top: 20, left: 20, right: 20),
           child: Column(
             children: [
               Row(
@@ -30,16 +30,16 @@ class _WeatherState extends State<Weather> {
                 children: [
                   Container(
                     child: Image.asset('assets/Group_6.png'),
-                    height: 100,
+                    height: 70,
                   ),
                   Container(
                     child: Image.asset('assets/Ellipse 14.png'),
-                    height: 100,
+                    height: 70,
                   ),
                 ],
               ),
               Padding(
-                padding: const EdgeInsets.only(right: 320),
+                padding: const EdgeInsets.only(right: 400),
                 child: IconButton(
                   onPressed: () {
                     Navigator.pop(context, GetStart());
@@ -88,50 +88,7 @@ class _WeatherState extends State<Weather> {
           ),
         ),
       ),
-      bottomNavigationBar: BottomAppBar(
-        color: Color.fromARGB(255, 205, 203, 203),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            IconButton(
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => Home(),
-                    ));
-              },
-              icon: Icon(Icons.home),
-              iconSize: 40,
-              color: Colors.black,
-            ),
-            IconButton(
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => Favorite(),
-                    ));
-              },
-              icon: Icon(Icons.favorite),
-              iconSize: 40,
-              color: Colors.black,
-            ),
-            IconButton(
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => ViewProfile(),
-                    ));
-              },
-              icon: Icon(Icons.account_circle),
-              iconSize: 40,
-              color: Colors.black,
-            ),
-          ],
-        ),
-      ),
+
     );
   }
 }

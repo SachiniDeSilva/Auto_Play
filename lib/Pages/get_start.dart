@@ -3,6 +3,7 @@ import 'package:auto_play/Pages/home.dart';
 import 'package:auto_play/Pages/time.dart';
 import 'package:auto_play/Pages/view_profile.dart';
 import 'package:auto_play/Pages/weather.dart';
+import 'package:auto_play/Pages/weather_1.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
@@ -30,11 +31,11 @@ class _GetStartState extends State<GetStart> {
                 children: [
                   Container(
                     child: Image.asset('assets/Group_6.png'),
-                    height: 100,
+                    height: 70,
                   ),
                   Container(
                     child: Image.asset('assets/Ellipse 14.png'),
-                    height: 100,
+                    height: 70,
                   ),
                 ],
               ),
@@ -47,11 +48,7 @@ class _GetStartState extends State<GetStart> {
                       backgroundColor: Color.fromARGB(255, 4, 21, 35),
                       fixedSize: Size(200, 60)),
                   onPressed: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                      builder: (_) {
-                        return Time();
-                      },
-                    ));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const Time()));
                   },
                   child: Text(
                     'Time',
