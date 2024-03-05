@@ -27,12 +27,12 @@ class _RegisterState extends State<Register> {
     TextEditingController _emailController = TextEditingController();
       TextEditingController _passwordController = TextEditingController();
 
-      String _email ="";
-      String _password = "";
+      //late String _email ;
+      //late String _password ;
 void _handleSignUp() async{
   try{
     UserCredential userCredential =
-    await _auth.createUserWithEmailAndPassword(email: _email, password: _password);
+    await _auth.createUserWithEmailAndPassword(email: _emailController.text, password: _passwordController.text);
     print("User registered: ${userCredential.user!.email}");
 
 
@@ -82,8 +82,9 @@ void _handleSignUp() async{
           ],
         ),
         height: 60,
-        child: const TextField(
-          keyboardType: TextInputType.emailAddress,
+        child: TextField(
+          controller: _emailController,
+         keyboardType: TextInputType.emailAddress,
           style: TextStyle(
             color: Colors.black87,
           ),
@@ -132,7 +133,8 @@ Widget buildPassword() {
           ],
         ),
         height: 60,
-        child: const TextField(
+        child: TextField(
+        controller: _passwordController,
          obscureText: true,
           style: TextStyle(
             color: Colors.black87,
