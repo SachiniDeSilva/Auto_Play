@@ -186,32 +186,7 @@ class _TimeState extends State<Time> {
           ),
         ),
       ),
-      bottomNavigationBar: BottomAppBar(
-        color: const Color.fromARGB(255, 205, 203, 203),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.home),
-              iconSize: 40,
-              color: Colors.black,
-            ),
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.favorite),
-              iconSize: 40,
-              color: Colors.black,
-            ),
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.restart_alt),
-              iconSize: 40,
-              color: Colors.black,
-            ),
-          ],
-        ),
-      ),
+
     );
   }
 }

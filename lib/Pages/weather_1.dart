@@ -32,7 +32,7 @@ class _Weather_1State extends State<Weather_1> {
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.only(top: 60),
+          padding: EdgeInsets.only(top: 20),
           child: Column(
             children: [
               Padding(
@@ -42,17 +42,17 @@ class _Weather_1State extends State<Weather_1> {
                   children: [
                     Container(
                       child: Image.asset('assets/Group_6.png'),
-                      height: 100,
+                      height: 70,
                     ),
                     Container(
                       child: Image.asset('assets/Ellipse 14.png'),
-                      height: 100,
+                      height: 70,
                     ),
                   ],
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(right: 320),
+                padding: const EdgeInsets.only(right: 400),
                 child: IconButton(
                   onPressed: () {
                     Navigator.pop(context, Weather());
@@ -370,32 +370,7 @@ class _Weather_1State extends State<Weather_1> {
           ),
         ),
       ),
-      bottomNavigationBar: BottomAppBar(
-        color: Color.fromARGB(255, 205, 203, 203),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            IconButton(
-              onPressed: () {},
-              icon: Icon(Icons.home),
-              iconSize: 40,
-              color: Colors.black,
-            ),
-            IconButton(
-              onPressed: () {},
-              icon: Icon(Icons.favorite),
-              iconSize: 40,
-              color: Colors.black,
-            ),
-            IconButton(
-              onPressed: () {},
-              icon: Icon(Icons.account_circle),
-              iconSize: 40,
-              color: Colors.black,
-            ),
-          ],
-        ),
-      ),
+
     );
   }
 }
