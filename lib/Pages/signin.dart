@@ -1,8 +1,10 @@
 import 'package:auto_play/Pages/forget_pw_1.dart';
 import 'package:auto_play/Pages/forget_pw_2.dart';
 import 'package:auto_play/Pages/forget_pw_3.dart';
+import 'package:auto_play/Pages/get_start.dart';
 import 'package:auto_play/Pages/loadingPage.dart';
 import 'package:auto_play/Pages/register.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class SigninPage extends StatefulWidget {
@@ -14,6 +16,30 @@ class SigninPage extends StatefulWidget {
 
 
 class _SigninPageState extends State<SigninPage> {
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+  //final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+
+    TextEditingController _emailController = TextEditingController();
+      TextEditingController _passwordController = TextEditingController();
+
+
+ _handleSignIn() async{
+  await FirebaseAuth.instance.signInWithEmailAndPassword(email: _emailController.text, password: _passwordController.text).then((value) {
+Navigator.push(context, MaterialPageRoute(builder: (context)=>Loading()));
+  }).onError((error, stackTrace) {
+    print("Error ${error.toString()}");
+  });
+
+
+}
+  @override
+  void dispose(){
+
+    _emailController.dispose();
+    _passwordController.dispose();
+    super.dispose();
+  }
+      
   bool isRememberMe = false;
 
   Widget buildEmail() {
@@ -45,7 +71,8 @@ class _SigninPageState extends State<SigninPage> {
           ],
         ),
         height: 60,
-        child: const TextField(
+        child: TextField(
+          controller: _emailController,
           keyboardType: TextInputType.emailAddress,
           style: TextStyle(
             color: Colors.black87,
@@ -95,7 +122,8 @@ Widget buildPassword() {
           ],
         ),
         height: 60,
-        child: const TextField(
+        child:  TextField(
+          controller: _passwordController,
          obscureText: true,
           style: TextStyle(
             color: Colors.black87,
@@ -166,9 +194,9 @@ Widget buildLoginBtn() {
       padding: const EdgeInsets.symmetric(vertical: 25),
       width: double.infinity,
       child: ElevatedButton(
-        onPressed: (){
-    Navigator.push(context, MaterialPageRoute(builder: (context) => const Loading()));
-  } ,
+        onPressed: ( () => _handleSignIn() ),
+  
+  
         style: ElevatedButton.styleFrom(
           elevation: 5,
           padding: const EdgeInsets.all(15),
