@@ -1,4 +1,6 @@
 
+import 'package:auto_play/Pages/home.dart';
+import 'package:auto_play/Pages/loadingPage.dart';
 import 'package:auto_play/Pages/privacy_&_policy.dart';
 
 import 'package:auto_play/Pages/term_to_use.dart';
@@ -30,16 +32,11 @@ class _RegisterState extends State<Register> {
       //late String _email ;
       //late String _password ;
 void _handleSignUp() async{
-  try{
-    UserCredential userCredential =
-    await _auth.createUserWithEmailAndPassword(email: _emailController.text, password: _passwordController.text);
-    print("User registered: ${userCredential.user!.email}");
-
-
-  }catch(e){
-    print("Error during Registration:$e");
-  }
-
+   await FirebaseAuth.instance.createUserWithEmailAndPassword(email: _emailController.text, password: _passwordController.text).then((value) {
+Navigator.push(context, MaterialPageRoute(builder: (context)=>Loading()));
+  }).onError((error, stackTrace) {
+    print("Error ${error.toString()}");
+  });
 }
   @override
   void dispose(){
@@ -224,7 +221,7 @@ Widget buildVerifyBtn() {
            minimumSize: Size(300, 20),
         ),
         child: const Text(
-          "VERIFY",
+          "SIGN UP",
           style: TextStyle(
             color: Colors.white,
             fontSize: 18,
