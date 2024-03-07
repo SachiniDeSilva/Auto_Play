@@ -203,7 +203,7 @@ Widget buildLoginBtn() {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(15),
           ),
-          primary: const Color.fromARGB(255, 4, 21, 35),
+          backgroundColor: const Color.fromARGB(255, 4, 21, 35),
            minimumSize: const Size(300, 20),
         ),
         child: const Text(
