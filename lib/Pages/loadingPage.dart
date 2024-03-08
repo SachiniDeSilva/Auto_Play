@@ -56,10 +56,12 @@ class _LoadingState extends State<Loading> {
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) => const ViewProfile()));
               },
+
               
               child: CircleAvatar(
                 
                 radius: 35,backgroundColor: Colors.white,
+
                 backgroundImage: AssetImage('assets/Ellipse 14.png'),
               ),
             ),
