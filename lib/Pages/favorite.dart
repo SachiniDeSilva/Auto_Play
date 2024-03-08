@@ -1,5 +1,6 @@
 import 'package:auto_play/Pages/home.dart';
 import 'package:auto_play/Pages/mydrawer.dart';
+import 'package:auto_play/Pages/upload.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
@@ -389,11 +390,13 @@ class _FavoriteState extends State<Favorite> {
                 right: 16.0,
                 child: Container(
                   decoration: BoxDecoration(
-                      border: Border.all(color: Colors.black, width: 2.0),
-                      borderRadius: BorderRadius.circular(30.0)),
+                      
+                     ),
                   child: FloatingActionButton(
-                    onPressed: () {},
-                    child: const Icon(Icons.add),
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => const Upload()));
+                    },
+                    child: const Icon(Icons.add, color: Colors.black,),
                     backgroundColor: Colors.white,
                   ),
                 ),

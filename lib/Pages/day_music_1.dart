@@ -31,7 +31,7 @@ class _DayMusic1State extends State<DayMusic1> {
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.only(top: 60),
+          padding: const EdgeInsets.only(top: 20),
           child: Column(
             children: [
               Padding(
@@ -41,11 +41,11 @@ class _DayMusic1State extends State<DayMusic1> {
                   children: [
                     Container(
                       child: Image.asset('assets/Group_6.png'),
-                      height: 100,
+                      height: 70,
                     ),
                     Container(
                       child: Image.asset('assets/Ellipse 14.png'),
-                      height: 100,
+                      height: 70,
                     ),
                   ],
                 ),
@@ -204,35 +204,7 @@ class _DayMusic1State extends State<DayMusic1> {
           ),
         ),
       ),
-      bottomNavigationBar: BottomAppBar(
-        color: const Color.fromARGB(165, 78, 77, 77),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.home),
-              iconSize: 40,
-              color: Colors.black,
-            ),
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.favorite),
-              iconSize: 40,
-              color: Colors.black,
-            ),
-            IconButton(
-              onPressed: () {},
 
-              icon: Icon(Icons.account_circle),
-
-
-              iconSize: 40,
-              color: Colors.black,
-            ),
-          ],
-        ),
-      ),
     );
   }
 }

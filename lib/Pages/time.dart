@@ -30,7 +30,7 @@ class _TimeState extends State<Time> {
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.only(top: 60, left: 20, right: 20),
+          padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
           child: Column(
             children: [
               Row(
@@ -38,11 +38,11 @@ class _TimeState extends State<Time> {
                 children: [
                   SizedBox(
                     child: Image.asset('assets/Group_6.png'),
-                    height: 100,
+                    height: 70,
                   ),
                   SizedBox(
                     child: Image.asset('assets/Ellipse 14.png'),
-                    height: 100,
+                    height: 70,
                   ),
                 ],
               ),

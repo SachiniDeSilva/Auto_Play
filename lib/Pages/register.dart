@@ -4,6 +4,7 @@ import 'package:auto_play/Pages/loadingPage.dart';
 import 'package:auto_play/Pages/privacy_&_policy.dart';
 
 import 'package:auto_play/Pages/term_to_use.dart';
+import 'package:auto_play/Pages/verify.dart';
 import 'package:auto_play/userAuth/firebase_auth.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -33,7 +34,7 @@ class _RegisterState extends State<Register> {
       //late String _password ;
 void _handleSignUp() async{
    await FirebaseAuth.instance.createUserWithEmailAndPassword(email: _emailController.text, password: _passwordController.text).then((value) {
-Navigator.push(context, MaterialPageRoute(builder: (context)=>Loading()));
+Navigator.push(context, MaterialPageRoute(builder: (context)=>Verify()));
   }).onError((error, stackTrace) {
     print("Error ${error.toString()}");
   });
