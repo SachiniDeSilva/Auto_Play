@@ -1,3 +1,5 @@
+import 'package:auto_play/Pages/day_music_1.dart';
+import 'package:auto_play/Pages/day_music_2.dart';
 import 'package:auto_play/Pages/favorite.dart';
 import 'package:auto_play/Pages/home.dart';
 import 'package:auto_play/Pages/time.dart';
